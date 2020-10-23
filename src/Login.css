@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px;
+}
+.login-container{
+    border: solid 1.5px;
+    border-radius: 10px;
+    padding: 30px;
+    
+}
+
+.btn-connexion {
+    background-color: purple;
+    color: white;
+    padding: 1rem 5.5rem;
+}
+.btn-creer {
+    background-color: #4A48AB ;
+    color: white;
+    padding: 1rem 1.5rem;
+}
+hr{
+    height:2px;
+    border-width:0;
+    color:black;
+    background-color:black
+}
+
