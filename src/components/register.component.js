@@ -159,7 +159,7 @@ class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <button className="btn btn-connexion">Sign Up</button>
+                  <button className="btn btn-primary btn-block">Sign Up</button>
                 </div>
               </div>
             )}
@@ -167,7 +167,7 @@ class Register extends Component {
             {message && (
               <div className="form-group">
                 <div className={ this.state.successful ? "alert alert-success" : "alert alert-danger" } role="alert">
-                  {message}
+                  <b>Bienvenue sur Qrcode CMS {message}</b> 
                 </div>
               </div>
             )}

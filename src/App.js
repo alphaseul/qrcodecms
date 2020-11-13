@@ -11,6 +11,7 @@ import Register from "./components/register.component";
 import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
+import Annonces from "./components/annonces.component";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
@@ -80,6 +81,13 @@ class App extends Component {
                 </Link>
               </li>
               {currentUser && (
+                <li className="Nav-item">
+                  <Link to={"/annonces"} className="nav-link text-dark">
+                    <b>Annonces</b>
+                  </Link>
+                </li>
+              )}
+              {currentUser && (
                 <li className="nav-item">
                   <Link to={"/user"} className="nav-link text-dark">
                     <b>User</b>
@@ -125,6 +133,7 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/profile" component={Profile} />
               <Route path="/user" component={BoardUser} />
+              <Route path="/annonces" component={Annonces}/>
             </Switch>
           </div>
         </div>

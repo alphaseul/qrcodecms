@@ -12,6 +12,10 @@ class UserService{
     getUserBoard() {
         return axios.get(API_URL + 'clients', { headers: authHeader() });
       }
+
+    getAnnonce() {
+        return axios.get(API_URL + 'annonces', { headers: authHeader() })
+    }
 }
 
 export default new UserService();
