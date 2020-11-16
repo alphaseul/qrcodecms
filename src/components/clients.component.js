@@ -1,14 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Table, Button, InputGroup, Form, Col, FormControl, Container } from 'react-bootstrap';
 import {AiOutlineSearch} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import UserService from "../services/user.service";
 
+export default class Clients extends Component{
 
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          content: []
+        };
+      }
+    
+      componentDidMount() {
+        UserService.getClients().then(
+          response => {
+            this.setState({
+              content: response.data
+            });
+          },
+          error => {
+            this.setState({
+              content:
+                (error.response &&
+                  error.response.data &&
+                  error.response.data.message) ||
+                error.message ||
+                error.toString()
+            });
+          }
+        );
+      }
 
-
-function Client(){
-    return(
+    render(){
+        const clients = this.state.content;
+        const listClient = clients.map((objectMAp, index)=>
+            <tr key={objectMAp.id}>
+                <td>{objectMAp.id}</td>
+                <td>{objectMAp.prenom}</td>
+                <td>{objectMAp.nom}</td>
+                <td>{objectMAp.email}</td> 
+            </tr>
+        )
+        return(
             <div>
                 <div className="d-flex float-right">
                     <Form.Group as={Col}>
@@ -28,31 +65,15 @@ function Client(){
                         <Table striped bordered hover>
                             <thead>
                                 <tr>
-                                <th>#</th>
+                                <th>ID</th>
                                 <th>Prénom</th>
                                 <th>Nom</th>
-                                <th>Nom d'Utilisateur</th>
+                                <th>Email</th>
                                 <th>Active</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                </tr>
-                                <tr>
-                                <td>3</td>
-                                <td colSpan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                                </tr>
+                            <tbody>                               
+                                {listClient}
                             </tbody>
                         </Table>
                     </Container>
@@ -79,7 +100,7 @@ function Client(){
                     </nav>
                 </div>
             </div> 
-    )
+        )
+    }
 }
 
-export default Client;

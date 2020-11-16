@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Router, Switch, Route, Link } from "react-router-dom";
+import { Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import { Navbar} from 'react-bootstrap';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,6 +19,11 @@ import { clearMessage } from "./actions/message";
 import { history } from './helpers/history';
 import logo from './qrcode-logo.png';
 import Sidebar from './SideBar';
+import AddAnnonce from "./components/add-annonce.component";
+import AddCategorie from "./components/add-categorie.component";
+import Factures from "./components/facture.component";
+import Clients from "./components/clients.component"
+
 
 
 class App extends Component {
@@ -31,7 +36,7 @@ class App extends Component {
     };
 
     history.listen((location) => {
-      props.dispatch(clearMessage()); // clear message when changing location
+      props.dispatch(clearMessage());
     });
   }
 
@@ -71,10 +76,10 @@ class App extends Component {
             </Link>
             <div className="navbar-nav mr-auto">
               {currentUser && (
-                  <li className="nav-item">
-                    <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-                  </li>
-                )}
+                <li className="nav-item">
+                  <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+                </li>
+              )}
               <li className="nav-item">
                 <Link to={"/home"} className="nav-link text-dark ">
                   <b>Accueil</b>
@@ -89,10 +94,26 @@ class App extends Component {
               )}
               {currentUser && (
                 <li className="nav-item">
+                  <Link to={"/clients"} className="nav-link text-dark">
+                    <b>Mes Clients</b>
+                  </Link>
+                </li>
+              )}
+              {currentUser && (
+                <li className="nav-item">
                   <Link to={"/user"} className="nav-link text-dark">
                     <b>User</b>
                   </Link>
                 </li>
+              )}
+              {currentUser ? (
+                <li className="nav-item">
+                  <Link to={"/add-annonce"} className="nav-link text-dark"/>
+                  <Link to={"/add-categorie"} className="nav-link text-dark"/>
+                  <Link to={"/factures"} className="nav-link text-dark"/>
+                </li>
+              ):(
+                <Redirect to={"/login"}></Redirect>
               )}
             </div>
 
@@ -133,7 +154,11 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/profile" component={Profile} />
               <Route path="/user" component={BoardUser} />
+              <Route path="/clients" component={Clients}/>
               <Route path="/annonces" component={Annonces}/>
+              <Route path="/add-annonce" component={AddAnnonce}/>
+              <Route path="/add-categorie" component={AddCategorie}/>
+              <Route path="/factures" component={Factures}/>
             </Switch>
           </div>
         </div>

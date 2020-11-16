@@ -14,13 +14,13 @@ export default props => {
         className="d-inline-block align-top"
         alt="qrcode logo"
     />
-      <Link className="menu-item" to="#">
+      <Link className="menu-item" to="/add-annonce">
         Ajouter une annonce
       </Link>
-      <Link className="menu-item" to="#">
+      <Link className="menu-item" to="/add-categorie">
         Ajouter une catégorie
       </Link>
-      <Link className="menu-item" to="#">
+      <Link className="menu-item" to="/factures">
         Mes Factures
       </Link>
       <Link className="menu-item" to="#">

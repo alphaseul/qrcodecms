@@ -12,16 +12,16 @@ class Annonce extends Component{
         super(props);
     
         this.state = {
-          annon: [],
-          content: ""
+            content: []
         };
       }
 
     componentDidMount() {
         UserService.getAnnonce().then(
           response => {
+            console.log(response.data)
             this.setState({
-                annon: response.data
+                content: response.data
             });
             
           },
@@ -39,6 +39,33 @@ class Annonce extends Component{
       }
 
     render(){
+        const annonces = this.state.content;
+        const listItems = annonces.map((objectMAp, index) =>
+            <div key={objectMAp.id} className="mr-3 mb-2"> 
+                <Card style={{ width: '13rem'}}>
+                <Card.Img variant="top" src={image}/>
+                <Card.Body>
+                    <div className="d-flex row justify-content-between">
+                        <Card.Title>{objectMAp.nom}</Card.Title>
+                        <div>
+                            <p></p>
+                        </div> 
+                    </div>
+                    <Card.Text style={{overflow:'hidden', height:'70px'}}>
+                        <Link style={{textDecoration:'none', color:'black'}}>
+                            {objectMAp.description}
+                        </Link>
+                    </Card.Text>
+                    <div className="d-flex row justify-content-between">
+                        <Button className=" " variant="primary">Modifier</Button>
+                        <div className="mt-3">
+                            <b>{objectMAp.prix} <b>€</b></b>
+                        </div> 
+                    </div>
+                </Card.Body>
+                </Card>
+            </div>
+        );
         return(
             <div>
                 <div >
@@ -57,35 +84,10 @@ class Annonce extends Component{
                     </div>
                     <div className="container d-flex align-items-start">
                         <div className="row ml-5">
-                        
 
-                            <div className="mr-3 mb-2"> 
-                                <Card style={{ width: '13rem'}}>
-                                <Card.Img variant="top" src={image}/>
-                                <Card.Body>
-                                    <div className="d-flex row justify-content-between">
-                                        <Card.Title>{console.log( this.state.annon[0])}</Card.Title>
-                                        <div>
-                                            <p>Catégorie</p>
-                                        </div> 
-                                    </div>
-                                    <Card.Text style={{overflow:'hidden', height:'70px'}}>
-                                        <Link style={{textDecoration:'none', color:'black'}}>
-
-                                        </Link>
-                                    </Card.Text>
-                                    <div className="d-flex row justify-content-between">
-                                        <Button className=" " variant="primary">Modifier</Button>
-                                        <div className="mt-3">
-                                            <b>prix</b>
-                                        </div> 
-                                    </div>
-                                </Card.Body>
-                                </Card>
-                            </div>
-                           
-    
-                        </div>
+                            {listItems}
+            
+                         </div>
                         <aside className="ml-5 mt-5d fixed" style={{marginTop:'5%'}}>
                             <div>
                                 <Card style={{ width: '18rem' }}>

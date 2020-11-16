@@ -3,12 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
-export default class AddAnnonce extends Component{
+export default class Factures extends Component{
     render(){
         return(
             <div className="container">
             <header className="jumbotron">
-              <h3>AddAnnonce</h3>
+              <h3>Factures</h3>
             </header>
           </div>
         );
