@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
-import {AiOutlineMail} from 'react-icons/ai';
-import {RiLockPasswordLine} from 'react-icons/ri';
+import { Redirect } from "react-router-dom";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -10,7 +10,6 @@ import CheckButton from "react-validation/build/button";
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
 import "../Login.css";
-
 
 const required = (value) => {
   if (!value) {
@@ -67,7 +66,7 @@ class Login extends Component {
         })
         .catch(() => {
           this.setState({
-            loading: false
+            loading: false,
           });
         });
     } else {
@@ -81,74 +80,76 @@ class Login extends Component {
     const { isLoggedIn, message } = this.props;
 
     if (isLoggedIn) {
-      return <Redirect to="/profile" />;
+      return <Redirect to="/home" />;
     }
 
     return (
-
       <div>
-           <div className="col-md-12">
-              <div className="card card-container">
-                <Form
-                  onSubmit={this.handleLogin}
-                  ref={(c) => {
-                    this.form = c;
-                  }}
-                >
-                  <div className="form-group">
-                    <label htmlFor="email"><AiOutlineMail/> Email</label>
-                    <Input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      value={this.state.email}
-                      onChange={this.onChangeEmail}
-                      validations={[required]}
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="password"><RiLockPasswordLine/> Password</label>
-                    <Input
-                      type="password"
-                      className="form-control"
-                      name="password"
-                      value={this.state.password}
-                      onChange={this.onChangePassword}
-                      validations={[required]}
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <button
-                      className="btn btn-connexion"
-                      disabled={this.state.loading}
-                    >
-                      {this.state.loading && (
-                        <span className="spinner-border spinner-border-sm"></span>
-                      )}
-                      <span>Connexion</span>
-                    </button>
-                  </div>
-
-                  {message && (
-                    <div className="form-group">
-                      <div className="alert alert-danger" role="alert">
-                        {message}
-                      </div>
-                    </div>
-                  )}
-                  <CheckButton
-                    style={{ display: "none" }}
-                    ref={(c) => {
-                      this.checkBtn = c;
-                    }}
-                  />
-                </Form>
+        <div className="col-md-12">
+          <div className="card card-container">
+            <Form
+              onSubmit={this.handleLogin}
+              ref={(c) => {
+                this.form = c;
+              }}
+            >
+              <div className="form-group">
+                <label htmlFor="email">
+                  <AiOutlineMail /> Email
+                </label>
+                <Input
+                  type="email"
+                  className="form-control"
+                  name="email"
+                  value={this.state.email}
+                  onChange={this.onChangeEmail}
+                  validations={[required]}
+                />
               </div>
-            </div>
+
+              <div className="form-group">
+                <label htmlFor="password">
+                  <RiLockPasswordLine /> Password
+                </label>
+                <Input
+                  type="password"
+                  className="form-control"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.onChangePassword}
+                  validations={[required]}
+                />
+              </div>
+
+              <div className="form-group">
+                <button
+                  className="btn btn-connexion"
+                  disabled={this.state.loading}
+                >
+                  {this.state.loading && (
+                    <span className="spinner-border spinner-border-sm"></span>
+                  )}
+                  <span>Connexion</span>
+                </button>
+              </div>
+
+              {message && (
+                <div className="form-group">
+                  <div className="alert alert-danger" role="alert">
+                    {message}
+                  </div>
+                </div>
+              )}
+              <CheckButton
+                style={{ display: "none" }}
+                ref={(c) => {
+                  this.checkBtn = c;
+                }}
+              />
+            </Form>
+          </div>
+        </div>
       </div>
-     
     );
   }
 }
@@ -158,7 +159,7 @@ function mapStateToProps(state) {
   const { message } = state.message;
   return {
     isLoggedIn,
-    message
+    message,
   };
 }
 
