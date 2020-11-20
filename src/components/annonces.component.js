@@ -25,19 +25,14 @@ class Annonce extends Component {
   componentDidMount() {
     UserService.getAnnonce().then(
       (response) => {
-        console.log(response.data);
         this.setState({
           content: response.data,
         });
       },
-      (error) => {
+      (response) => {
+        console.log(response.data);
         this.setState({
-          content:
-            (error.response &&
-              error.response.data &&
-              error.response.data.message) ||
-            error.message ||
-            error.toString(),
+          content: response.data,
         });
       }
     );
@@ -52,22 +47,16 @@ class Annonce extends Component {
           <Card.Body>
             <div className="d-flex row justify-content-between">
               <Card.Title>{objectMAp.nom}</Card.Title>
-              <div>
-                <p></p>
-              </div>
             </div>
-            <Card.Text style={{ overflow: "hidden", height: "70px" }}>
-              <Link style={{ textDecoration: "none", color: "black" }}>
-                {objectMAp.description}
-              </Link>
-            </Card.Text>
+            <Card.Text>{objectMAp.description}</Card.Text>
             <div className="d-flex row justify-content-between">
               <Button className=" " variant="primary">
                 Modifier
               </Button>
               <div className="mt-3">
                 <b>
-                  {objectMAp.prix} <b>€</b>
+                  <b>€</b>
+                  {objectMAp.prix}
                 </b>
               </div>
             </div>
