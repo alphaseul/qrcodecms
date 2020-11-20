@@ -60,6 +60,17 @@ class App extends Component {
       <div>
         <Router history={history}>
           <div>
+            <nav>
+              {currentUser && (
+                <li className="nav-item">
+                  <Sidebar
+                    pageWrapId={"page-wrap"}
+                    outerContainerId={"outer-container"}
+                  />
+                </li>
+              )}
+            </nav>
+
             <Navbar bg="light" expand="lg">
               <Navbar.Brand href="Login">
                 {currentUser && (
@@ -73,6 +84,7 @@ class App extends Component {
                 )}
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
               <Navbar.Collapse id="basic-navbar-nav">
                 <Link to={"/"} className="navbar-brand">
                   {!currentUser && (
@@ -86,14 +98,6 @@ class App extends Component {
                   )}
                 </Link>
                 <div className="navbar-nav mr-auto">
-                  {currentUser && (
-                    <li className="nav-item">
-                      <Sidebar
-                        pageWrapId={"page-wrap"}
-                        outerContainerId={"outer-container"}
-                      />
-                    </li>
-                  )}
                   <Nav className="mr-auto">
                     <li className="nav-item">
                       <Nav.Link>
@@ -133,23 +137,20 @@ class App extends Component {
 
                   {currentUser && (
                     <li className="Nav-item">
-                      <Link to={"/annonces"} className="nav-link text-dark">
-                        <b>Annonces</b>
-                      </Link>
+                      <Nav.Link>
+                        <Link to={"/annonces"} className="nav-link text-dark">
+                          <b>Annonces</b>
+                        </Link>
+                      </Nav.Link>
                     </li>
                   )}
                   {currentUser && (
                     <li className="nav-item">
-                      <Link to={"/clients"} className="nav-link text-dark">
-                        <b>Mes Clients</b>
-                      </Link>
-                    </li>
-                  )}
-                  {currentUser && (
-                    <li className="nav-item">
-                      <Link to={"/user"} className="nav-link text-dark">
-                        <b>User</b>
-                      </Link>
+                      <Nav.Link>
+                        <Link to={"/clients"} className="nav-link text-dark">
+                          <b>Mes Clients</b>
+                        </Link>
+                      </Nav.Link>
                     </li>
                   )}
                   {currentUser ? (
@@ -171,6 +172,11 @@ class App extends Component {
 
                 {currentUser ? (
                   <div className="navbar-nav ml-auto">
+                    <li className="nav-item">
+                      <Link to={"/user"} className="nav-link text-dark">
+                        <b>User</b>
+                      </Link>
+                    </li>
                     <li className="nav-item text-dark">
                       <Link to={"/profile"} className="nav-link text-dark">
                         <b>Profile</b>
