@@ -10,3 +10,7 @@
   text-decoration: none;
   color: white;
 }
+
+.alink a:hover {
+  border-style: hidden hidden solid hidden;
+}

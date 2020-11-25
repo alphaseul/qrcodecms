@@ -1,3 +1,20 @@
+@font-face {
+  font-family: myFont;
+  src: url(../src/font/RobotoSlabLight-7Br0P.ttf);
+}
+@font-face {
+  font-family: myFontTitle;
+  src: url(../src/font/RobotoSlabBold-PKGJr.ttf);
+}
+
+h1 {
+  font-family: myFontTitle;
+}
+
+a:hover b {
+  border-color: #85139e;
+  border-style: hidden hidden solid hidden;
+}
 label {
   display: block;
   margin-top: 10px;

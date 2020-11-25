@@ -1,0 +1,35 @@
+.contact {
+  height: 800px;
+}
+h1 {
+  text-align: center;
+}
+.formContact {
+  width: 50%;
+}
+input {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+}
+.imageContact {
+  position: relative;
+  width: 50%;
+  background: url(image/contact.jpg) no-repeat left center;
+  background-size: cover;
+}
+.formInside {
+  width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.btnStyle {
+  width: 100%;
+  background-color: #6f4bf1;
+  color: white;
+  border-radius: 10px;
+}
+.btnStyle:hover {
+  background-color: #85139e;
+}

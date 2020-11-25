@@ -17,6 +17,8 @@ import {
   BsLaptop,
   BsTablet,
 } from "react-icons/bs";
+import { FaReact, FaBootstrap, FaWordpressSimple, FaAws } from "react-icons/fa";
+import { SiJavascript, SiFlutter } from "react-icons/si";
 
 export default class Home extends Component {
   render() {
@@ -50,7 +52,7 @@ export default class Home extends Component {
             </div>
           </div>
         </header>
-        <section className="features-icons bg-light text-center">
+        <section className=" jumbotron features-icons bg-light text-center">
           <div className="container">
             <div className="row">
               <div className="col-lg-4">
@@ -98,7 +100,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <section className="features-icons bg-light text-center">
+        <section className="features-icons text-center">
           <h1 style={{ marginBottom: "10%" }}>Fonctionnalités</h1>
           <div style={{ marginLeft: "10%", marginRight: "10%" }}>
             <div className="row">
@@ -221,7 +223,53 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
-
+        <section>
+          <div className="jumbotron">
+            <h1>Nous utilisons</h1>
+            <div className="d-flex justify-content-around">
+              <div>
+                <FaReact
+                  style={{ width: "100%", height: "100%", color: "#85139e" }}
+                />
+                <p>
+                  <b>REACT</b>
+                </p>
+              </div>
+              <div>
+                <FaBootstrap
+                  style={{ width: "100%", height: "100%", color: "#85139e" }}
+                />
+                <p>
+                  <b>BOOTSTRAP</b>
+                </p>
+              </div>
+              <div>
+                <FaAws
+                  style={{ width: "100%", height: "100%", color: "#85139e" }}
+                />
+                <p>
+                  <b>AWS</b>
+                </p>
+              </div>
+              <div>
+                <SiFlutter
+                  style={{ width: "100%", height: "100%", color: "#85139e" }}
+                />
+                <p>
+                  <b>Flutter</b>
+                </p>
+              </div>
+              <div>
+                <FaWordpressSimple
+                  style={{ width: "100%", height: "100%", color: "#85139e" }}
+                />
+                <p>
+                  <b>Wordpress</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <section
           className="testimonials text-center bg-dark"
           style={{ color: "white" }}

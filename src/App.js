@@ -12,18 +12,19 @@ import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import Annonces from "./components/annonces.component";
-
-import { logout } from "./actions/auth";
-import { clearMessage } from "./actions/message";
-
-import { history } from "./helpers/history";
-import logo from "./qrcode-logo.png";
-import Sidebar from "./SideBar";
+import Devis from "./components/devis.component";
 import AddAnnonce from "./components/add-annonce.component";
 import AddCategorie from "./components/add-categorie.component";
 import Factures from "./components/facture.component";
 import Clients from "./components/clients.component";
 import Footer from "./components/footer.component";
+import logo from "./qrcode-logo.png";
+import Sidebar from "./SideBar";
+
+import { logout } from "./actions/auth";
+import { clearMessage } from "./actions/message";
+import { history } from "./helpers/history";
+import Contact from "./components/contact.component";
 
 class App extends Component {
   constructor(props) {
@@ -100,57 +101,45 @@ class App extends Component {
                 <div className="navbar-nav mr-auto">
                   <Nav className="mr-auto">
                     <li className="nav-item">
-                      <Nav.Link>
-                        <Link to={"/home"} className="nav-link text-dark ">
-                          <b>ACCUEIL</b>
-                        </Link>
-                      </Nav.Link>
+                      <Link to={"/home"} className="nav-link text-dark ">
+                        <b>ACCUEIL</b>
+                      </Link>
                     </li>
                     {!currentUser && (
                       <li className="nav-item">
-                        <Nav.Link>
-                          <Link to={"/apropos"} className="nav-link text-dark ">
-                            <b>A PROPOS</b>
-                          </Link>
-                        </Nav.Link>
+                        <Link to={"/apropos"} className="nav-link text-dark ">
+                          <b>A PROPOS</b>
+                        </Link>
                       </li>
                     )}
                     {!currentUser && (
                       <li className="nav-item">
-                        <Nav.Link>
-                          <Link to={"/devis"} className="nav-link text-dark ">
-                            <b>DEVIS</b>
-                          </Link>
-                        </Nav.Link>
+                        <Link to={"/devis"} className="nav-link text-dark ">
+                          <b>DEVIS</b>
+                        </Link>
                       </li>
                     )}
                     {!currentUser && (
                       <li className="nav-item">
-                        <Nav.Link>
-                          <Link to={"/contact"} className="nav-link text-dark ">
-                            <b>CONTACT</b>
-                          </Link>
-                        </Nav.Link>
+                        <Link to={"/contact"} className="nav-link text-dark ">
+                          <b>CONTACT</b>
+                        </Link>
                       </li>
                     )}
                   </Nav>
 
                   {currentUser && (
                     <li className="Nav-item">
-                      <Nav.Link>
-                        <Link to={"/annonces"} className="nav-link text-dark">
-                          <b>Annonces</b>
-                        </Link>
-                      </Nav.Link>
+                      <Link to={"/annonces"} className="nav-link text-dark">
+                        <b>Annonces</b>
+                      </Link>
                     </li>
                   )}
                   {currentUser && (
                     <li className="nav-item">
-                      <Nav.Link>
-                        <Link to={"/clients"} className="nav-link text-dark">
-                          <b>Mes Clients</b>
-                        </Link>
-                      </Nav.Link>
+                      <Link to={"/clients"} className="nav-link text-dark">
+                        <b>Mes Clients</b>
+                      </Link>
                     </li>
                   )}
                   {currentUser ? (
@@ -202,7 +191,7 @@ class App extends Component {
 
                     <li className="nav-item">
                       <Link to={"/register"} className="nav-link text-dark">
-                        <b>Créer un compte</b>
+                        <b>S'inscrire</b>
                       </Link>
                     </li>
                   </div>
@@ -221,6 +210,8 @@ class App extends Component {
                 <Route path="/add-annonce" component={AddAnnonce} />
                 <Route path="/add-categorie" component={AddCategorie} />
                 <Route path="/factures" component={Factures} />
+                <Route path="/devis" component={Devis} />
+                <Route path="/contact" component={Contact} />
               </Switch>
             </div>
           </div>
