@@ -195,10 +195,10 @@ export default class Home extends Component {
                 <div>
                   <h2>Paiement en un clic</h2>
                   <p className="text-justify">
-                    Praesent sapien massa, convallis a pellentesque nec, egestas
-                    non nisi. Vestibulum ante ipsum primis in faucibus orci
-                    luctus et ultrices posuere cubilia Curae; Donec velit neque,
-                    auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                    Il n’a jamais été aussi facile d’acheter un produit dans
+                    votre app de eCommerce. Activez Apple Pay, Google Pay
+                    (soon), Pay Pal et gommez toutes les frictions durant le
+                    processus d’achat
                   </p>
                 </div>
               </div>
@@ -213,10 +213,9 @@ export default class Home extends Component {
                 <div>
                   <h2>Push notifications</h2>
                   <p className="text-justify">
-                    Praesent sapien massa, convallis a pellentesque nec, egestas
-                    non nisi. Vestibulum ante ipsum primis in faucibus orci
-                    luctus et ultrices posuere cubilia Curae; Donec velit neque,
-                    auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                    Le moyen le plus direct pour interagir avec vos utilisateurs
+                    et le moyen le plus rapide pour les faire retourner dans
+                    votre app
                   </p>
                 </div>
               </div>
