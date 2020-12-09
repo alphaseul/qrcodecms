@@ -65,27 +65,27 @@ export default class Devis extends Component {
               </div>
             </div>
             <div className="form-group">
-              <label for="name">Nom du propriétaite</label>
+              <label>Nom du propriétaite</label>
               <input type="text" id="name" className="form-control" />
             </div>
             <div className="form-group">
-              <label for="email">Adresse mail du propriétaire</label>
+              <label>Adresse mail du propriétaire</label>
               <input type="email" id="email" className="form-control" />
             </div>
             <div className="form-group">
-              <label for="number">Numéro de téléphone du propriétaire</label>
+              <label>Numéro de téléphone du propriétaire</label>
               <input type="tel" id="number" className="form-control " />
             </div>
             <div className="form-group">
-              <label for="nameSocity">Nom de de votre entreprise</label>
+              <label>Nom de de votre entreprise</label>
               <input type="text" id="nameSocity" className="form-control " />
             </div>
             <div className="form-group">
-              <label for="emailSocity">Email de de votre entreprise</label>
+              <label>Email de de votre entreprise</label>
               <input type="email" id="emailSocity" className="form-control " />
             </div>
             <div className="form-group">
-              <label for="numberSocity">Numéro de de votre entreprise</label>
+              <label>Numéro de de votre entreprise</label>
               <input type="tel" id="numberSocity" className="form-control " />
             </div>
             <button
@@ -147,11 +147,11 @@ export default class Devis extends Component {
               </div>
             </div>
             <div className="form-group">
-              <label for="textarea">Présentez-nous votre entreprise ?</label>
+              <label>Présentez-nous votre entreprise ?</label>
               <textarea type="text" className="form-control" id="textarea" />
             </div>
             <div className="form-group">
-              <label for="budget">Quel est votre budget ?</label>
+              <label>Quel est votre budget ?</label>
               <input type="text" className="form-control" id="budget" />
             </div>
             <div className="form-group">
@@ -159,53 +159,53 @@ export default class Devis extends Component {
               <div className="d-flex justify-content-around">
                 <div className="form-check ">
                   <input
-                    class="form-check-input is-invalid"
+                    className="form-check-input is-invalid"
                     type="checkbox"
                     value=""
                     id="invalidCheck"
                   />
-                  <label for="invalidCheck">Site vitrine</label>
+                  <label>Site vitrine</label>
                 </div>
                 <div className="form-check">
                   <input
-                    class="form-check-input is-invalid"
+                    className="form-check-input is-invalid"
                     type="checkbox"
                     value=""
                     id="invalidCheck"
                   />
-                  <label for="invalidCheck">Site e-commerce</label>
+                  <label>Site e-commerce</label>
                 </div>
                 <div className="form-check">
                   <input
-                    class="form-check-input is-invalid"
+                    className="form-check-input is-invalid"
                     type="checkbox"
                     value=""
                     id="invalidCheck"
                   />
-                  <label for="invalidCheck">Application mobile</label>
+                  <label>Application mobile</label>
                 </div>
                 <div className="form-check">
                   <input
-                    class="form-check-input is-invalid"
+                    className="form-check-input is-invalid"
                     type="checkbox"
                     value=""
                     id="invalidCheck"
                   />
-                  <label for="invalidCheck">Media en ligne</label>
+                  <label>Media en ligne</label>
                 </div>
                 <div className="form-check">
                   <input
-                    class="form-check-input is-invalid"
+                    className="form-check-input is-invalid"
                     type="checkbox"
                     value=""
                     id="invalidCheck"
                   />
-                  <label for="invalidCheck">Support promotionnel</label>
+                  <label>Support promotionnel</label>
                 </div>
               </div>
             </div>
             <div className="form-gourp">
-              <label for="language">Quelles langues sont concernées ?</label>
+              <label>Quelles langues sont concernées ?</label>
               <input type="text" className="form-control" id="language" />
             </div>
             <button
@@ -286,14 +286,14 @@ export default class Devis extends Component {
               </div>
             </div>
             <div className="form-goup">
-              <label for="color">
+              <label>
                 Quel sera le code couleur de votre site ? Quelle sera la couleur
                 dominante ?
               </label>
               <input className="form-control" type="text" id="color" />
             </div>
             <div className="form-goup">
-              <label for="colorVar">
+              <label>
                 Y a-t-il des variation du code coulaur selon les sections ou les
                 pages de votre site ?
               </label>
@@ -301,21 +301,21 @@ export default class Devis extends Component {
             </div>
             <div className="form-check">
               <input
-                class="form-check-input is-invalid"
+                className="form-check-input is-invalid"
                 type="checkbox"
                 value=""
                 id="yes"
               />
-              <label for="yes">OUI</label>
+              <label>OUI</label>
             </div>
             <div className="form-check">
               <input
-                class="form-check-input is-invalid"
+                className="form-check-input is-invalid"
                 type="checkbox"
                 value=""
                 id="no"
               />
-              <label for="no">NON</label>
+              <label>NON</label>
             </div>
             <button
               className="btn btn-lg mt-4 mr-1"
@@ -396,7 +396,7 @@ export default class Devis extends Component {
               </div>
             </div>
             <div className="form-group">
-              <label for="selling">
+              <label>
                 Votre site comprend-t-il une boutique en ligne ? si oui, essayer
                 de précier les modes de livraison et de paiement envisagés, la
                 présence de fonctionnalité de cross-selling ...{" "}
@@ -404,15 +404,13 @@ export default class Devis extends Component {
               <textarea type="text" className="form-control" id="selling" />
             </div>
             <div className="form-group">
-              <label for="passwordAsk">
+              <label>
                 Doit-il y avoir un espace client sécurisé par mot de passe ?
               </label>
               <input type="text" className="form-control" id="passwordAsk" />
             </div>
             <div className="form-group">
-              <label for="typePrest">
-                Quel type de prestation souhaitez-vous ?
-              </label>
+              <label>Quel type de prestation souhaitez-vous ?</label>
               <input type="text" className="form-control" id="typePrest" />
             </div>
             <button

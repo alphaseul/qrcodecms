@@ -1,64 +1,101 @@
 import React, { Component } from "react";
+import { Form } from "react-bootstrap";
 import "../components/style/contact.css";
+import { Formik } from "formik";
+import userService from "../services/user.service";
 
-class Contact extends Component {
-  state = {};
+const msg = {
+  to: "alphaseul3@gmail.com",
+  from: "dev@qrcode-protect.com",
+  subject: " ",
+  html: " ",
+};
+
+export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      validate: true,
+    };
+  }
   render() {
+    let { validate } = this.state;
+
     return (
-      <div className="container d-flex contact my-4 bg-light">
-        <div className="imageContact"></div>
-        <div className="formContact d-flex align-items-center">
-          <div className="formInside">
-            <form>
-              <h1>Contactez-nous</h1>
-              <div className="form-group">
-                <label for="name">Nom</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  placeholder="Albert Dupont"
-                />
+      <div>
+        {validate && (
+          <div className="container d-flex contact my-4 bg-light">
+            <div className="imageContact"></div>
+            <div className="formContact d-flex align-items-center">
+              <div className="formInside">
+                <Formik
+                  initialValues={{
+                    name: " ",
+                    email: " ",
+                    message: " ",
+                  }}
+                  onSubmit={(values) => {
+                    this.setState((state) => ({ validate: false }));
+                    msg.subject = values.name + " " + values.email;
+                    msg.html = values.message;
+                    userService.sendmail(msg);
+                  }}
+                >
+                  {({ handleChange, handleSubmit, values }) => (
+                    <Form onSubmit={handleSubmit}>
+                      <h1>Contactez-nous</h1>
+                      <label>Nom</label>
+                      <Form.Group>
+                        <Form.Control
+                          type="text"
+                          name="name"
+                          className="form-control"
+                          value={values.name}
+                          onChange={handleChange}
+                          placeholder="Albert Dupont"
+                        />
+                      </Form.Group>
+
+                      <label>Email address</label>
+                      <Form.Group>
+                        <Form.Control
+                          type="email"
+                          name="email"
+                          className="form-control"
+                          value={values.email}
+                          onChange={handleChange}
+                          placeholder="name@example.com"
+                        />
+                      </Form.Group>
+
+                      <label>Message</label>
+                      <Form.Group>
+                        <Form.Control
+                          type="text"
+                          name="message"
+                          as="textarea"
+                          rows={3}
+                          className="form-control"
+                          value={values.message}
+                          onChange={handleChange}
+                        />
+                      </Form.Group>
+
+                      <button
+                        type="submit"
+                        className="btn btn-secondary btn-lg btnStyle"
+                      >
+                        <b>ENVOYER</b>
+                      </button>
+                    </Form>
+                  )}
+                </Formik>
               </div>
-              <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="name@example.com"
-                />
-              </div>
-              <div className="form-group">
-                <label for="select">Votre besoin</label>
-                <select class="form-control" id="select">
-                  <option>Votre besoin</option>
-                  <option>Site Web</option>
-                  <option>Application Mobile</option>
-                  <option>Autre</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  type="text"
-                  className="form-control"
-                  id="message"
-                  rows="4"
-                />
-              </div>
-              <button
-                type="submit"
-                className="btn btn-secondary btn-lg btnStyle"
-              >
-                <b>ENVOYER</b>
-              </button>
-            </form>
+            </div>
           </div>
-        </div>
+        )}
+        {!validate && <h1>Nous vous recontacterons dans les 48H</h1>}
       </div>
     );
   }
 }
-
-export default Contact;

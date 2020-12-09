@@ -67,7 +67,7 @@ class Annonce extends Component {
     return (
       <div>
         <div>
-          <div className="mt-2 d-flex float-right">
+          <div className="d-flex float-right">
             <Form.Group as={Col}>
               <InputGroup>
                 <FormControl
@@ -84,7 +84,7 @@ class Annonce extends Component {
           </div>
           <div className="container d-flex align-items-start">
             <div className="row ml-5">{listItems} </div> {/* list of items  */}
-            <aside className="ml-5 mt-5d fixed" style={{ marginTop: "5%" }}>
+            <aside className="ml-5 fixed">
               <div>
                 <Card style={{ width: "18rem" }}>
                   <Card.Header className="bg-dark text-white">
@@ -101,7 +101,7 @@ class Annonce extends Component {
                           className="d-inline-block align-top ml-3"
                           alt="qrcode logo"
                         />
-                        <span class="ml-5 badge badge-light">4</span>
+                        <span className="ml-5 badge badge-light">4</span>
                       </Link>
                     </ListGroup.Item>
                   </ListGroup>
@@ -113,26 +113,26 @@ class Annonce extends Component {
 
         <div style={{ float: "right" }}>
           <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item">
-                <Link class="page-link" href="#" aria-label="Previous">
+            <ul className="pagination">
+              <li className="page-item">
+                <Link className="page-link" href="#" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
+                  <span className="sr-only">Previous</span>
                 </Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link">1</Link>
+              <li className="page-item">
+                <Link className="page-link">1</Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link">2</Link>
+              <li className="page-item">
+                <Link className="page-link">2</Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link">3</Link>
+              <li className="page-item">
+                <Link className="page-link">3</Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link" aria-label="Next">
+              <li className="page-item">
+                <Link className="page-link" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
+                  <span className="sr-only">Next</span>
                 </Link>
               </li>
             </ul>

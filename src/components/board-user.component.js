@@ -7,25 +7,25 @@ export default class BoardUser extends Component {
     super(props);
 
     this.state = {
-      content: ""
+      content: "",
     };
   }
 
   componentDidMount() {
     UserService.getUserBoard().then(
-      response => {
+      (response) => {
         this.setState({
-          content: response.data[0].nom +' '+response.data[0].prenom
+          content: response.data[0].nom + " " + response.data[0].prenom,
         });
       },
-      error => {
+      (error) => {
         this.setState({
           content:
             (error.response &&
               error.response.data &&
               error.response.data.message) ||
             error.message ||
-            error.toString()
+            error.toString(),
         });
       }
     );
@@ -33,11 +33,11 @@ export default class BoardUser extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="d-flex container">
         <header className="jumbotron">
           <h3>{this.state.content}</h3>
         </header>
       </div>
     );
   }
-} 
+}

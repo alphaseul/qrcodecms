@@ -10,11 +10,14 @@
 h1 {
   font-family: myFontTitle;
 }
-
-a:hover b {
+.textDecocation {
+  text-decoration: none;
+}
+.navbarhover :hover {
   border-color: #85139e;
   border-style: hidden hidden solid hidden;
 }
+
 label {
   display: block;
   margin-top: 10px;
