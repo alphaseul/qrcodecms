@@ -325,7 +325,7 @@ export default class Home extends Component {
                       alt="inter"
                       style={{ backgroundColor: "blue" }}
                     />
-                    <h5>Boucherie Rahman</h5>
+                    <h5>ICF-Formation</h5>
                   </a>
                 </div>
               </div>
