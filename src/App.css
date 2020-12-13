@@ -14,8 +14,7 @@ h1 {
   text-decoration: none;
 }
 .navbarhover :hover {
-  border-color: #85139e;
-  border-style: hidden hidden solid hidden;
+  color: #85139e;
 }
 
 label {

@@ -3,6 +3,7 @@ import { Form } from "react-bootstrap";
 import "../components/style/contact.css";
 import { Formik } from "formik";
 import userService from "../services/user.service";
+import telImg from "./style/image/contact.jpg";
 
 const msg = {
   to: "alphaseul3@gmail.com",
@@ -24,9 +25,11 @@ export default class Contact extends Component {
     return (
       <div>
         {validate && (
-          <div className="container d-flex contact my-4 bg-light">
-            <div className="imageContact"></div>
-            <div className="formContact d-flex align-items-center">
+          <div className=" d-flex contact bg-light justify-content-center row mb-3">
+            <div>
+              <img src={telImg} alt="telImg" className="telImg"></img>
+            </div>
+            <div className="formContact d-flex align-items-center col-sm-6">
               <div className="formInside">
                 <Formik
                   initialValues={{
@@ -44,20 +47,33 @@ export default class Contact extends Component {
                   {({ handleChange, handleSubmit, values }) => (
                     <Form onSubmit={handleSubmit}>
                       <h1>Contactez-nous</h1>
-                      <label>Nom</label>
+
                       <Form.Group>
+                        <label>Nom</label>
                         <Form.Control
                           type="text"
                           name="name"
                           className="form-control"
                           value={values.name}
                           onChange={handleChange}
-                          placeholder="Albert Dupont"
+                          placeholder="alpha sow"
                         />
                       </Form.Group>
 
-                      <label>Email address</label>
                       <Form.Group>
+                        <label>Numero de tel</label>
+                        <Form.Control
+                          type="tel"
+                          name="number"
+                          className="form-control"
+                          value={values.email}
+                          onChange={handleChange}
+                          placeholder="num de tel"
+                        />
+                      </Form.Group>
+
+                      <Form.Group>
+                        <label>Email address</label>
                         <Form.Control
                           type="email"
                           name="email"
@@ -68,16 +84,17 @@ export default class Contact extends Component {
                         />
                       </Form.Group>
 
-                      <label>Message</label>
                       <Form.Group>
+                        <label>Message</label>
                         <Form.Control
                           type="text"
                           name="message"
                           as="textarea"
-                          rows={3}
+                          rows={6}
                           className="form-control"
                           value={values.message}
                           onChange={handleChange}
+                          placeholder="votre message"
                         />
                       </Form.Group>
 
