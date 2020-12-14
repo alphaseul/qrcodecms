@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-qrcodecms-dev-171524-authRole",
+      "UnauthRoleArn": "arn:aws:iam::963526565751:role/amplify-qrcodecms-dev-171524-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::963526565751:role/amplify-qrcodecms-dev-171524-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-qrcodecms-dev-171524-deployment",
+      "UnauthRoleName": "amplify-qrcodecms-dev-171524-unauthRole",
+      "StackName": "amplify-qrcodecms-dev-171524",
+      "StackId": "arn:aws:cloudformation:us-east-1:963526565751:stack/amplify-qrcodecms-dev-171524/950d8530-3e27-11eb-bd11-0a5cf73de175",
+      "AmplifyAppId": "dgzdwlwnekgh6"
+    }
+  }
+}
