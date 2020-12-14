@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+}
+.telImg {
+  width: 30rem;
+  height: 35rem;
+}
+.formInside {
+  width: 100%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.btnStyle {
+  width: 100%;
+  background-color: #6f4bf1;
+  color: white;
+  border-radius: 10px;
+}
+.btnStyle:hover {
+  background-color: #85139e;
+}

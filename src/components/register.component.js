@@ -6,6 +6,7 @@ import { isEmail } from "validator";
 
 import { connect } from "react-redux";
 import { register } from "../actions/auth";
+import "../Login.css";
 
 const required = (value) => {
   if (!value) {
@@ -159,15 +160,24 @@ class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block">Sign Up</button>
+                  <button className="btn btn-block btn-connexion ">
+                    Sign Up
+                  </button>
                 </div>
               </div>
             )}
 
             {message && (
               <div className="form-group">
-                <div className={ this.state.successful ? "alert alert-success" : "alert alert-danger" } role="alert">
-                  <b>Bienvenue sur Qrcode CMS {message}</b> 
+                <div
+                  className={
+                    this.state.successful
+                      ? "alert alert-success"
+                      : "alert alert-danger"
+                  }
+                  role="alert"
+                >
+                  <b>Bienvenue sur Qrcode CMS {message}</b>
                 </div>
               </div>
             )}

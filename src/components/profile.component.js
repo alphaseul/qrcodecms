@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 class Profile extends Component {
-
   render() {
     const { user: currentUser } = this.props;
 
@@ -12,7 +11,7 @@ class Profile extends Component {
     }
 
     return (
-      <div className="container">
+      <div className="d-flex container">
         <header className="jumbotron">
           <h3>
             <strong>{currentUser.email}</strong>

@@ -1,0 +1,16 @@
+.footerUp {
+  min-height: 100%;
+  background-color: #85139e;
+}
+.footerDown {
+  color: aliceblue;
+  background-color: #2c2a2e;
+}
+.alink a {
+  text-decoration: none;
+  color: white;
+}
+
+.alink a:hover {
+  border-style: hidden hidden solid hidden;
+}
