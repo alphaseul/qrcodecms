@@ -53,7 +53,7 @@ export default class Contact extends Component {
                     </a>
                   </i>
                   <h4>Tel:</h4>
-                  <p>+33 6 67B43 57 33</p>
+                  <p>+33 6 67 43 57 33</p>
                 </div>
 
                 <Iframe
