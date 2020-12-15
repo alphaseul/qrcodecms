@@ -48,7 +48,7 @@ export default class Contact extends Component {
 
                 <div className="phone">
                   <i className="icofont-phone">
-                    <a href="tel:+33 6 67B43 57 33">
+                    <a href="tel:+33 6 67 43 57 33">
                       <MdCall style={{ color: "#85139e" }} />
                     </a>
                   </i>
