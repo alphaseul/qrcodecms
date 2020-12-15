@@ -27,7 +27,7 @@ class App extends Component {
 
   componentDidMount() {
     const user = this.props.user;
-
+    console.log(this.people);
     if (user) {
       this.setState({
         currentUser: user,
