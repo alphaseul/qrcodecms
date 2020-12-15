@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./components/style/footer.css";
 import logo from "./logo2.png";
 
@@ -34,16 +35,16 @@ const Footer = (props) => {
 
                   <ul className="alink list-unstyled">
                     <li>
-                      <a href="#!">Servives</a>
+                      <a href="#!">Services</a>
                     </li>
                     <li>
                       <a href="#!">Blog</a>
                     </li>
                     <li>
-                      <a href="#!">Devis Gratuit</a>
+                      <Link to="/devis">Devis Gratuit</Link>
                     </li>
                     <li>
-                      <a href="#!">Contact</a>
+                      <Link to="/contact">Contact</Link>
                     </li>
                   </ul>
                 </div>

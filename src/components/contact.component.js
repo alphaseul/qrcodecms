@@ -38,7 +38,9 @@ export default class Contact extends Component {
 
                 <div className="email">
                   <i className="icofont-envelope">
-                    <AiOutlineMail />
+                    <a href="mailto:agence@qrcode-protect.fr">
+                      <AiOutlineMail style={{ color: "#85139e" }} />
+                    </a>
                   </i>
                   <h4>Email:</h4>
                   <p>agence@qrcode-protect.fr</p>
@@ -46,10 +48,12 @@ export default class Contact extends Component {
 
                 <div className="phone">
                   <i className="icofont-phone">
-                    <MdCall />
+                    <a href="tel:+33 6 67B43 57 33">
+                      <MdCall style={{ color: "#85139e" }} />
+                    </a>
                   </i>
-                  <h4>Call:</h4>
-                  <p>+33 7 67 75 53 08</p>
+                  <h4>Tel:</h4>
+                  <p>+33 6 67B43 57 33</p>
                 </div>
 
                 <Iframe
