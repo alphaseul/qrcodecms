@@ -31,7 +31,7 @@ const NavBar = (props) => {
                 <b>ACCUEIL</b>
               </Link>
               <Link
-                to={"/#"}
+                to={"/contact"}
                 className="mr-3 text-dark navbarhover "
                 style={{ textDecoration: "none" }}
               >
@@ -54,6 +54,13 @@ const NavBar = (props) => {
                 </p>
                 <div className="dropdown-content">
                   <div className="d-flex flex-column">
+                    <Link
+                      to={"/devis"}
+                      className="text-dark navbarhover ml-3"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <b>Devis</b>
+                    </Link>
                     <Link
                       to={"/connexion"}
                       className="text-dark navbarhover ml-3"
