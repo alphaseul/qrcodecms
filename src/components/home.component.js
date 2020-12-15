@@ -103,10 +103,7 @@ export default class Home extends Component {
                   <h4>
                     <Link to="/#">Création de site Web</Link>
                   </h4>
-                  <p>
-                    Voluptatum deleniti atque corrupti quos dolores et quas
-                    molestias excepturi
-                  </p>
+                  <p></p>
                 </div>
               </div>
 
@@ -122,12 +119,9 @@ export default class Home extends Component {
                     </i>
                   </div>
                   <h4>
-                    <Link to="/#">Développement D'application</Link>
+                    <Link to="/#">Développement D'application mobile</Link>
                   </h4>
-                  <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore
-                  </p>
+                  <p></p>
                 </div>
               </div>
 
@@ -145,10 +139,7 @@ export default class Home extends Component {
                   <h4>
                     <Link to="/#">Création de qr-code</Link>
                   </h4>
-                  <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia
-                  </p>
+                  <p></p>
                 </div>
               </div>
 
@@ -164,12 +155,11 @@ export default class Home extends Component {
                     </i>
                   </div>
                   <h4>
-                    <Link to="/#">SEO</Link>
+                    <Link to="/#">
+                      Optimisation pour les moteurs de recherche (SEO)
+                    </Link>
                   </h4>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis
-                  </p>
+                  <p></p>
                 </div>
               </div>
             </div>
