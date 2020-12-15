@@ -100,7 +100,8 @@ section {
 }
 
 #hero .btn-get-started:hover {
-  background: #209dd8;
+  background: black;
+  text-decoration: none;
 }
 
 #hero .btn-watch-video {

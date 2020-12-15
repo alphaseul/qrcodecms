@@ -22,7 +22,7 @@ const NavBar = (props) => {
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse className="justify-content-center">
+            <Navbar.Collapse className="justify-content-end">
               <Link
                 to={"/home"}
                 className="mr-3 text-dark navbarhover"
@@ -45,14 +45,13 @@ const NavBar = (props) => {
               >
                 <b>SUPPORT</b>
               </Link>
-              <div className="dropdown">
-                <Link
-                  to=""
-                  className="mr-3 text-dark"
-                  style={{ textDecoration: "none" }}
+              <div className="dropdown ">
+                <p
+                  className="align-items-center mt-3"
+                  style={{ cursor: "default" }}
                 >
                   <b>SERVICES</b>
-                </Link>
+                </p>
                 <div className="dropdown-content">
                   <div className="d-flex flex-column">
                     <Link
