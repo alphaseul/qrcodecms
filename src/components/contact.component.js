@@ -108,7 +108,7 @@ export default class Contact extends Component {
                   <div className="validate"></div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="name">Méssage</label>
+                  <label htmlFor="name">Message</label>
                   <textarea
                     className="form-control"
                     name="message"

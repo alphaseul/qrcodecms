@@ -11,7 +11,6 @@ import client5 from "./style/image/clients/client-5.png";
 import client6 from "./style/image/clients/client-6.png";
 
 import { BsPhone, BsLaptop } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import { BsBoxArrowInRight, BsChatDots, BsBoxArrowUp } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdNotificationsActive, MdCreditCard } from "react-icons/md";
@@ -35,15 +34,15 @@ export default class Home extends Component {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h1>QR Code Protect</h1>
+                <h1>QR-Code Protect</h1>
                 <h2>
                   La référence Numerique #1 Dans la création D'application
                   Mobile Et Site Web
                 </h2>
                 <div className="d-lg-flex">
-                  <Link to="/devis" className="btn-get-started scrollto">
+                  <a href="/devis" className="btn-get-started scrollto">
                     Obtenir un devis maintenant
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div
@@ -84,8 +83,11 @@ export default class Home extends Component {
 
         <section id="services" className="services section-bg">
           <div className="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Nos compétences</h2>
+            </div>
             <div className="row">
-              <div className="col-xl-3 col-md-6 d-flex align-items-stretch">
+              <div className="col-xl-3 col-md-6 d-flex align-items-stretch ">
                 <div className="icon-box">
                   <div className="icon">
                     <i>
@@ -93,7 +95,7 @@ export default class Home extends Component {
                     </i>
                   </div>
                   <h4>
-                    <Link to="/#">Création de site Web</Link>
+                    <a href="/#">Création de site Web et Application web</a>
                   </h4>
                   <p></p>
                 </div>
@@ -107,7 +109,9 @@ export default class Home extends Component {
                     </i>
                   </div>
                   <h4>
-                    <Link to="/#">Développement D'application mobile</Link>
+                    <a href="/#">
+                      Création D'application mobile Android/iOS natives
+                    </a>
                   </h4>
                   <p></p>
                 </div>
@@ -121,7 +125,9 @@ export default class Home extends Component {
                     </i>
                   </div>
                   <h4>
-                    <Link to="/#">Création de qr-code</Link>
+                    <a href="/#">
+                      Génération de Qrcode pour une communication interactive
+                    </a>
                   </h4>
                   <p></p>
                 </div>
@@ -135,9 +141,9 @@ export default class Home extends Component {
                     </i>
                   </div>
                   <h4>
-                    <Link to="/#">
+                    <a href="/#">
                       Optimisation pour les moteurs de recherche (SEO)
-                    </Link>
+                    </a>
                   </h4>
                   <p></p>
                 </div>
@@ -270,7 +276,7 @@ export default class Home extends Component {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-6">
-                <h4>QR-code newsletter</h4>
+                <h4>QR-code protect newsletter</h4>
                 <p></p>
                 <form action="" method="post">
                   <input type="email" name="email" />

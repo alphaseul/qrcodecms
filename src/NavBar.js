@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import logo from "./qrcode-logo.png";
 import "./NavBar.css";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 const NavBar = (props) => {
   return (
@@ -42,20 +43,22 @@ const NavBar = (props) => {
                   className="align-items-center mt-3"
                   style={{ cursor: "default" }}
                 >
-                  <b>SERVICES</b>
+                  <b>
+                    SERVICES <RiArrowDownSLine />
+                  </b>
                 </p>
                 <div className="dropdown-content">
-                  <div className="d-flex flex-column">
+                  <div className="d-flex flex-column ">
                     <a
                       href={"/devis"}
-                      className="text-dark navbarhover ml-3"
+                      className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
                       <b>Devis</b>
                     </a>
                     <a
                       href={"/connexion"}
-                      className="text-dark navbarhover ml-3"
+                      className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
                       <b>Connexion</b>
@@ -63,14 +66,14 @@ const NavBar = (props) => {
 
                     <a
                       href={"/register"}
-                      className="text-dark navbarhover ml-3"
+                      className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
                       <b>S'inscrire</b>
                     </a>
                     <a
                       href={"/apropos"}
-                      className="text-dark navbarhover ml-3"
+                      className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
                       <b>A PROPOS</b>

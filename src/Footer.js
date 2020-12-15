@@ -39,10 +39,6 @@ const Footer = (props) => {
                     </li>
                     <li>
                       <i className="bx bx-chevron-right"></i>{" "}
-                      <a href="/#">Services</a>
-                    </li>
-                    <li>
-                      <i className="bx bx-chevron-right"></i>{" "}
                       <a href="/#">Condition générale</a>
                     </li>
                     <li>
