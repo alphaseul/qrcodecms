@@ -48,30 +48,20 @@
 .contact .info .social-links {
   padding-left: 60px;
 }
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
+.contact .info .email i a,
+.contact .info .phone i a {
+  color: #85139e;
 }
-
-.contact .info .social-links a:hover {
+.contact .info .phone:hover i,
+.contact .info .email:hover i {
   background: #85139e;
+}
+.contact .info .phone:hover i a,
+.contact .info .email:hover i a {
   color: #fff;
 }
 
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contact .info .address:hover i {
   background: #85139e;
   color: #fff;
 }
