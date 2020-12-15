@@ -21,7 +21,7 @@ export default class Contact extends Component {
   }
   render() {
     return (
-      <section id="contact" class="contact">
+      <section id="contact" className="contact">
         <div className="container" data-aos="fade-up">
           <div className="section-title"></div>
 
@@ -71,7 +71,7 @@ export default class Contact extends Component {
               <form className="php-email-form">
                 <div className="row">
                   <div className="form-group col-md-6">
-                    <label for="name">Nom</label>
+                    <label htmlFor="name">Nom</label>
                     <input
                       type="text"
                       name="name"
@@ -83,7 +83,7 @@ export default class Contact extends Component {
                     <div className="validate"></div>
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="name">Email</label>
+                    <label htmlFor="name">Email</label>
                     <input
                       type="email"
                       className="form-control"
@@ -96,7 +96,7 @@ export default class Contact extends Component {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label for="name">Sujet</label>
+                  <label htmlFor="name">Sujet</label>
                   <input
                     type="text"
                     className="form-control"
@@ -108,7 +108,7 @@ export default class Contact extends Component {
                   <div className="validate"></div>
                 </div>
                 <div className="form-group">
-                  <label for="name">Méssage</label>
+                  <label htmlFor="name">Méssage</label>
                   <textarea
                     className="form-control"
                     name="message"
@@ -116,7 +116,7 @@ export default class Contact extends Component {
                     data-rule="required"
                     data-msg="Please write something for us"
                   ></textarea>
-                  <div class="validate"></div>
+                  <div className="validate"></div>
                 </div>
                 <div className="mb-3">
                   <div className="loading">Loading</div>

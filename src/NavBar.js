@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import logo from "./qrcode-logo.png";
 import "./NavBar.css";
 
@@ -11,7 +10,7 @@ const NavBar = (props) => {
         <Navbar bg="light" expand="lg">
           <div className="container">
             <Navbar.Brand>
-              <Link to={"/"} className="navbar-brand">
+              <a href={"/"} className="navbar-brand">
                 <img
                   src={logo}
                   width="250"
@@ -19,33 +18,26 @@ const NavBar = (props) => {
                   className="d-inline-block align-top"
                   alt="qrcode logo"
                 />
-              </Link>
+              </a>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end">
-              <Link
-                to={"/home"}
+              <a
+                href={"/home"}
                 className="mr-3 text-dark navbarhover"
                 style={{ textDecoration: "none" }}
               >
                 <b>ACCUEIL</b>
-              </Link>
-              <Link
-                to={"/contact"}
+              </a>
+              <a
+                href={"/contact"}
                 className="mr-3 text-dark navbarhover "
                 style={{ textDecoration: "none" }}
               >
                 <b>NOS TARIFS</b>
-              </Link>
+              </a>
 
-              <Link
-                to={"/contact"}
-                className="mr-3 text-dark navbarhover "
-                style={{ textDecoration: "none" }}
-              >
-                <b>SUPPORT</b>
-              </Link>
-              <div className="dropdown ">
+              <div className="dropdown mr-3">
                 <p
                   className="align-items-center mt-3"
                   style={{ cursor: "default" }}
@@ -54,38 +46,45 @@ const NavBar = (props) => {
                 </p>
                 <div className="dropdown-content">
                   <div className="d-flex flex-column">
-                    <Link
-                      to={"/devis"}
+                    <a
+                      href={"/devis"}
                       className="text-dark navbarhover ml-3"
                       style={{ textDecoration: "none" }}
                     >
                       <b>Devis</b>
-                    </Link>
-                    <Link
-                      to={"/connexion"}
+                    </a>
+                    <a
+                      href={"/connexion"}
                       className="text-dark navbarhover ml-3"
                       style={{ textDecoration: "none" }}
                     >
                       <b>Connexion</b>
-                    </Link>
+                    </a>
 
-                    <Link
-                      to={"/register"}
+                    <a
+                      href={"/register"}
                       className="text-dark navbarhover ml-3"
                       style={{ textDecoration: "none" }}
                     >
                       <b>S'inscrire</b>
-                    </Link>
-                    <Link
-                      to={"/apropos"}
+                    </a>
+                    <a
+                      href={"/apropos"}
                       className="text-dark navbarhover ml-3"
                       style={{ textDecoration: "none" }}
                     >
                       <b>A PROPOS</b>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
+              <a
+                href={"/contact"}
+                className="text-dark navbarhover "
+                style={{ textDecoration: "none" }}
+              >
+                <b>SUPPORT</b>
+              </a>
             </Navbar.Collapse>
           </div>
         </Navbar>

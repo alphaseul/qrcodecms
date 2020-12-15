@@ -27,11 +27,11 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <section id="hero" class="d-flex align-items-center">
-          <div class="container">
-            <div class="row">
+        <section id="hero" className="d-flex align-items-center">
+          <div className="container">
+            <div className="row">
               <div
-                class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                className="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -41,7 +41,7 @@ export default class Home extends Component {
                   Mobile Et Site Web
                 </h2>
                 <div className="d-lg-flex">
-                  <Link to="/devis" class="btn-get-started scrollto">
+                  <Link to="/devis" className="btn-get-started scrollto">
                     Obtenir un devis maintenant
                   </Link>
                 </div>
@@ -60,22 +60,22 @@ export default class Home extends Component {
         <section id="cliens" className="section-bg cliens" data-aos="zoom-in">
           <div className="container">
             <div className="row" data-aos="zoom-in">
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                 <img src={client1} className="img-fluid" alt="" />
               </div>
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                 <img src={client2} className="img-fluid" alt="" />
               </div>
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                 <img src={client3} className="img-fluid" alt="" />
               </div>
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                 <img src={client4} className="img-fluid" alt="" />
               </div>
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                 <img src={client5} className="img-fluid" alt="" />
               </div>
-              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+              <div className="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                 <img src={client6} className="img-fluid" alt="" />
               </div>
             </div>
@@ -145,7 +145,7 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
-        <section id="team" class="team section-bg">
+        <section id="team" className="team section-bg">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
               <h2>Fonctionnalité</h2>
@@ -266,10 +266,10 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
-        <div class="footer-newsletter">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
+        <div className="footer-newsletter">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-6">
                 <h4>QR-code newsletter</h4>
                 <p></p>
                 <form action="" method="post">

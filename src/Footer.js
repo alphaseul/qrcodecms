@@ -1,79 +1,118 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./components/style/footer.css";
-import logo from "./logo2.png";
+import { FiTwitter, FiFacebook, FiInstagram } from "react-icons/fi";
+import { FaSnapchatSquare, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = (props) => {
   return (
     <div>
       {props.currentUser && (
         <div className="footer">
-          <footer className="footerUp page-footer font-small indigo">
-            <div
-              className="container text-center text-md-left"
-              style={{ paddingTop: "5%", paddingBottom: "5%" }}
-            >
+          <div className="footer-top">
+            <div className="container">
               <div className="row">
-                <hr className="clearfix w-100 d-md-none"></hr>
-
-                <div className="col-md-3 mx-auto">
-                  <img
-                    src={logo}
-                    width="250"
-                    height="250"
-                    className="d-inline-block align-top"
-                    alt="qrcode logo"
-                  />
+                <div className="col-lg-3 col-md-6 footer-contact">
+                  <h3>QR-code protect</h3>
+                  <p>
+                    126 Boulevard Paul Hayez <br />
+                    Douai, 59650
+                    <br />
+                    France <br />
+                    <br />
+                    <strong>Phone: +33 6 67 43 57 33</strong>
+                    <br />
+                    <strong>Email:</strong> agence@qrcode-protect.fr
+                    <br />
+                  </p>
                 </div>
 
-                <hr className="clearfix w-100 d-md-none"></hr>
-
-                <div className="col-md-3 mx-auto">
-                  <h5 className="font-weight-bold text-uppercase mt-3 mb-4">
-                    QR code Protect
-                  </h5>
-
-                  <ul className="alink list-unstyled">
+                <div className="col-lg-3 col-md-6 footer-links">
+                  <h4>Liens utiles</h4>
+                  <ul>
                     <li>
-                      <a href="#!">Services</a>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/home">Acceuil</a>
                     </li>
                     <li>
-                      <a href="#!">Blog</a>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">A Propos</a>
                     </li>
                     <li>
-                      <Link to="/devis">Devis Gratuit</Link>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">Services</a>
                     </li>
                     <li>
-                      <Link to="/contact">Contact</Link>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">Condition générale</a>
+                    </li>
+                    <li>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/contact">Politique de confidentialité</a>
                     </li>
                   </ul>
                 </div>
 
-                <hr className="clearfix w-100 d-md-none"></hr>
-
-                <div className="col-md-3 mx-auto">
-                  <h5 className="font-weight-bold text-uppercase mt-3 mb-4">
-                    A Propos
-                  </h5>
-
-                  <ul className="alink list-unstyled">
+                <div className="col-lg-3 col-md-6 footer-links">
+                  <h4>Nos Services</h4>
+                  <ul>
                     <li>
-                      <a href="#!">Qui sommes-nous</a>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">Design Web </a>
                     </li>
                     <li>
-                      <a href="#!">Mentions légales</a>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">Development Web</a>
                     </li>
                     <li>
-                      <a href="#!">CGU</a>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">Gestion des produits</a>
                     </li>
                     <li>
-                      <a href="#!">CGV</a>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">Marketing</a>
+                    </li>
+                    <li>
+                      <i className="bx bx-chevron-right"></i>{" "}
+                      <a href="/#">Design Graphique</a>
                     </li>
                   </ul>
+                </div>
+
+                <div className="col-lg-3 col-md-6 footer-links">
+                  <h4>Nos Réseaux Sociaux</h4>
+
+                  <div className="social-links mt-3">
+                    <a href="/#" className="twitter">
+                      <i className="bx bxl-twitter">
+                        <FiTwitter />
+                      </i>
+                    </a>
+                    <a href="/#" className="facebook">
+                      <i className="bx bxl-facebook">
+                        <FiFacebook />
+                      </i>
+                    </a>
+                    <a href="/#" className="instagram">
+                      <i className="bx bxl-instagram">
+                        <FiInstagram />
+                      </i>
+                    </a>
+                    <a href="/#" className="google-plus">
+                      <i className="bx bxl-skype">
+                        <FaSnapchatSquare />
+                      </i>
+                    </a>
+                    <a href="/#" className="linkedin">
+                      <i className="bx bxl-linkedin">
+                        <FaLinkedinIn />
+                      </i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </footer>
+          </div>
+
           <div className="footerDown footer-copyright text-center py-3">
             QR code Protect © Tous droits réservés
           </div>
