@@ -27,6 +27,7 @@ class App extends Component {
 
   componentDidMount() {
     const user = this.props.user;
+    document.title = "QR-code protect";
     console.log(this.people);
     if (user) {
       this.setState({
