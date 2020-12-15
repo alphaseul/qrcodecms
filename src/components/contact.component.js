@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-import { Form } from "react-bootstrap";
 import "../components/style/contact.css";
-import { Formik } from "formik";
-import userService from "../services/user.service";
-import telImg from "./style/image/contact.jpg";
-
-const msg = {
-  to: "alphaseul3@gmail.com",
-  from: "dev@qrcode-protect.com",
-  subject: " ",
-  html: " ",
-};
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Iframe from "react-iframe";
+import { GoLocation } from "react-icons/go";
+import { AiOutlineMail } from "react-icons/ai";
+import { MdCall } from "react-icons/md";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -19,100 +14,121 @@ export default class Contact extends Component {
       validate: true,
     };
   }
+  componentDidMount() {
+    AOS.init({
+      duration: 2000,
+    });
+  }
   render() {
-    let { validate } = this.state;
-
     return (
-      <div>
-        {validate && (
-          <div className=" d-flex contact bg-light justify-content-center row mb-3">
-            <div>
-              <img src={telImg} alt="telImg" className="telImg"></img>
-            </div>
-            <div className="formContact d-flex align-items-center col-sm-6">
-              <div className="formInside">
-                <Formik
-                  initialValues={{
-                    name: " ",
-                    email: " ",
-                    message: " ",
-                  }}
-                  onSubmit={(values) => {
-                    this.setState((state) => ({ validate: false }));
-                    msg.subject = values.name + " " + values.email;
-                    msg.html = values.message;
-                    userService.sendmail(msg);
-                  }}
-                >
-                  {({ handleChange, handleSubmit, values }) => (
-                    <Form onSubmit={handleSubmit}>
-                      <h1>Contactez-nous</h1>
+      <section id="contact" class="contact">
+        <div className="container" data-aos="fade-up">
+          <div className="section-title"></div>
 
-                      <Form.Group>
-                        <label>Nom</label>
-                        <Form.Control
-                          type="text"
-                          name="name"
-                          className="form-control"
-                          value={values.name}
-                          onChange={handleChange}
-                          placeholder="alpha sow"
-                        />
-                      </Form.Group>
+          <div className="row">
+            <div className="col-lg-5 d-flex align-items-stretch">
+              <div className="info">
+                <div className="address">
+                  <i className="icofont-google-map">
+                    <GoLocation />
+                  </i>
+                  <h4>Adresse:</h4>
+                  <p>16 Boulevard Paul Hayez Douai 59500</p>
+                </div>
 
-                      <Form.Group>
-                        <label>Numero de tel</label>
-                        <Form.Control
-                          type="tel"
-                          name="number"
-                          className="form-control"
-                          value={values.email}
-                          onChange={handleChange}
-                          placeholder="num de tel"
-                        />
-                      </Form.Group>
+                <div className="email">
+                  <i className="icofont-envelope">
+                    <AiOutlineMail />
+                  </i>
+                  <h4>Email:</h4>
+                  <p>agence@qrcode-protect.fr</p>
+                </div>
 
-                      <Form.Group>
-                        <label>Email address</label>
-                        <Form.Control
-                          type="email"
-                          name="email"
-                          className="form-control"
-                          value={values.email}
-                          onChange={handleChange}
-                          placeholder="name@example.com"
-                        />
-                      </Form.Group>
+                <div className="phone">
+                  <i className="icofont-phone">
+                    <MdCall />
+                  </i>
+                  <h4>Call:</h4>
+                  <p>+33 7 67 75 53 08</p>
+                </div>
 
-                      <Form.Group>
-                        <label>Message</label>
-                        <Form.Control
-                          type="text"
-                          name="message"
-                          as="textarea"
-                          rows={6}
-                          className="form-control"
-                          value={values.message}
-                          onChange={handleChange}
-                          placeholder="votre message"
-                        />
-                      </Form.Group>
-
-                      <button
-                        type="submit"
-                        className="btn btn-secondary btn-lg btnStyle"
-                      >
-                        <b>ENVOYER</b>
-                      </button>
-                    </Form>
-                  )}
-                </Formik>
+                <Iframe
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJcVNoNm_JwkcRteMmLycJOUk&key=AIzaSyBfe2Zc2SCCBzMc9-BeLIe8bx88w-2r84A"
+                  frameborder="0"
+                  width="100%"
+                  height="290px"
+                  style={{ border: "0" }}
+                  allowfullscreen
+                ></Iframe>
               </div>
             </div>
+
+            <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <form className="php-email-form">
+                <div className="row">
+                  <div className="form-group col-md-6">
+                    <label for="name">Nom</label>
+                    <input
+                      type="text"
+                      name="name"
+                      className="form-control"
+                      id="name"
+                      data-rule="minlen:4"
+                      data-msg="Please enter at least 4 chars"
+                    />
+                    <div className="validate"></div>
+                  </div>
+                  <div className="form-group col-md-6">
+                    <label for="name">Email</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      name="email"
+                      id="email"
+                      data-rule="email"
+                      data-msg="Please enter a valid email"
+                    />
+                    <div className="validate"></div>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label for="name">Sujet</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="subject"
+                    id="subject"
+                    data-rule="minlen:4"
+                    data-msg="Please enter at least 8 chars of subject"
+                  />
+                  <div className="validate"></div>
+                </div>
+                <div className="form-group">
+                  <label for="name">Méssage</label>
+                  <textarea
+                    className="form-control"
+                    name="message"
+                    rows="10"
+                    data-rule="required"
+                    data-msg="Please write something for us"
+                  ></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div className="mb-3">
+                  <div className="loading">Loading</div>
+                  <div className="error-message"></div>
+                  <div className="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+                <div className="text-center">
+                  <button type="submit">ENVOYER</button>
+                </div>
+              </form>
+            </div>
           </div>
-        )}
-        {!validate && <h1>Nous vous recontacterons dans les 48H</h1>}
-      </div>
+        </div>
+      </section>
     );
   }
 }

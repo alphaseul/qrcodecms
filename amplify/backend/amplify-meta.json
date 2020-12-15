@@ -11,5 +11,54 @@
       "StackId": "arn:aws:cloudformation:us-east-1:963526565751:stack/amplify-qrcodecms-dev-171524/950d8530-3e27-11eb-bd11-0a5cf73de175",
       "AmplifyAppId": "dgzdwlwnekgh6"
     }
+  },
+  "function": {
+    "Users": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2020-12-14T17:44:57.963Z",
+      "lastPackageTimeStamp": "2020-12-14T17:44:58.463Z",
+      "distZipFilename": "Users-4e6b66654245714b344e-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-qrcodecms-dev-171524-deployment/amplify-cfn-templates/function/Users-cloudformation-template.json",
+        "logicalId": "functionUsers"
+      },
+      "lastPushTimeStamp": "2020-12-14T22:56:48.558Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:963526565751:function:Users-dev",
+        "Name": "Users-dev",
+        "LambdaExecutionRole": "qrcodecmsLambdaRolebf095238-dev"
+      },
+      "lastPushDirHash": "jl3xXlNr9DLgvy/8hY3eS6VgFXE="
+    }
+  },
+  "api": {
+    "User": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "Users",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-qrcodecms-dev-171524-deployment/amplify-cfn-templates/api/User-cloudformation-template.json",
+        "logicalId": "apiUser"
+      },
+      "lastPushTimeStamp": "2020-12-14T22:56:48.559Z",
+      "output": {
+        "ApiName": "User",
+        "RootUrl": "https://jcp3439ii7.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "jcp3439ii7"
+      },
+      "lastPushDirHash": "XAEILyHqr9wPuuePC8895A1k9X8="
+    }
   }
 }
