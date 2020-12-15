@@ -85,11 +85,7 @@ export default class Home extends Component {
         <section id="services" className="services section-bg">
           <div className="container" data-aos="fade-up">
             <div className="row">
-              <div
-                className="col-xl-3 col-md-6 d-flex align-items-stretch"
-                data-aos="zoom-in"
-                data-aos-delay="100"
-              >
+              <div className="col-xl-3 col-md-6 d-flex align-items-stretch">
                 <div className="icon-box">
                   <div className="icon">
                     <i>
@@ -103,11 +99,7 @@ export default class Home extends Component {
                 </div>
               </div>
 
-              <div
-                className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-              >
+              <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                 <div className="icon-box">
                   <div className="icon">
                     <i>
@@ -121,11 +113,7 @@ export default class Home extends Component {
                 </div>
               </div>
 
-              <div
-                className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-              >
+              <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0">
                 <div className="icon-box">
                   <div className="icon">
                     <i>
@@ -139,11 +127,7 @@ export default class Home extends Component {
                 </div>
               </div>
 
-              <div
-                className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
-                data-aos="zoom-in"
-                data-aos-delay="400"
-              >
+              <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0">
                 <div className="icon-box">
                   <div className="icon">
                     <i>
@@ -169,11 +153,7 @@ export default class Home extends Component {
 
             <div className="row">
               <div className="col-lg-6">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="100"
-                >
+                <div className="member d-flex align-items-start">
                   <i>
                     <BsBoxArrowInRight size={40} style={{ color: "#85139e" }} />
                   </i>
@@ -191,11 +171,7 @@ export default class Home extends Component {
               </div>
 
               <div className="col-lg-6 mt-4 mt-lg-0">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                >
+                <div className="member d-flex align-items-start">
                   <i className="icon-check mr-4 text-primary">
                     <FiShoppingCart size={40} style={{ color: "#85139e" }} />
                   </i>
@@ -212,11 +188,7 @@ export default class Home extends Component {
               </div>
 
               <div className="col-lg-6 mt-4">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="300"
-                >
+                <div className="member d-flex align-items-start">
                   <i className="icon-check mr-4 text-primary">
                     <BsBoxArrowUp size={40} style={{ color: "#85139e" }} />
                   </i>
@@ -235,11 +207,7 @@ export default class Home extends Component {
               </div>
 
               <div className="col-lg-6 mt-4">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="400"
-                >
+                <div className="member d-flex align-items-start">
                   <i className="icon-check mr-4 text-primary">
                     <BsChatDots size={40} style={{ color: "#85139e" }} />
                   </i>
@@ -258,11 +226,7 @@ export default class Home extends Component {
                 </div>
               </div>
               <div className="col-lg-6 mt-4">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="400"
-                >
+                <div className="member d-flex align-items-start">
                   <i className="icon-check mr-4 text-primary">
                     <MdCreditCard size={40} style={{ color: "#85139e" }} />
                   </i>
@@ -279,11 +243,7 @@ export default class Home extends Component {
                 </div>
               </div>
               <div className="col-lg-6 mt-4">
-                <div
-                  className="member d-flex align-items-start"
-                  data-aos="zoom-in"
-                  data-aos-delay="400"
-                >
+                <div className="member d-flex align-items-start">
                   <i className="icon-check mr-4 text-primary">
                     <MdNotificationsActive
                       size={40}
