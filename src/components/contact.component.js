@@ -33,7 +33,7 @@ export default class Contact extends Component {
                     <GoLocation />
                   </i>
                   <h4>Adresse:</h4>
-                  <p>16 Boulevard Paul Hayez Douai 59500</p>
+                  <p>126 Boulevard Paul Hayez, 59500 Douai</p>
                 </div>
 
                 <div className="email">
