@@ -218,7 +218,7 @@ export default class Home extends Component {
                     <BsChatDots size={40} style={{ color: "#85139e" }} />
                   </i>
                   <div className="member-info">
-                    <h4>hat en ligne</h4>
+                    <h4>Tchat en ligne</h4>
 
                     <p>
                       Ouvrez un canal de discussion entre vos utilisateurs. Un
