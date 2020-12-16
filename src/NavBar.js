@@ -31,11 +31,11 @@ const NavBar = (props) => {
                 <b>ACCUEIL</b>
               </a>
               <a
-                href={"/contact"}
+                href={"/offres"}
                 className="mr-3 text-dark navbarhover "
                 style={{ textDecoration: "none" }}
               >
-                <b>NOS TARIFS</b>
+                <b>OFFRES</b>
               </a>
 
               <div className="dropdown mr-3">
@@ -50,14 +50,14 @@ const NavBar = (props) => {
                 <div className="dropdown-content">
                   <div className="d-flex flex-column ">
                     <a
-                      href={"/devis"}
+                      href={"/#"}
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
                       <b>Devis</b>
                     </a>
                     <a
-                      href={"/connexion"}
+                      href={"/#"}
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
@@ -65,14 +65,14 @@ const NavBar = (props) => {
                     </a>
 
                     <a
-                      href={"/register"}
+                      href={"/#"}
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
                       <b>S'inscrire</b>
                     </a>
                     <a
-                      href={"/apropos"}
+                      href={"/#"}
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >

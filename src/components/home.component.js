@@ -40,7 +40,7 @@ export default class Home extends Component {
                   Mobile Et Site Web
                 </h2>
                 <div className="d-lg-flex">
-                  <a href="/devis" className="btn-get-started scrollto">
+                  <a href="/Contact" className="btn-get-started scrollto">
                     Obtenir un devis maintenant
                   </a>
                 </div>
