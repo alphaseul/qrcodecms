@@ -23,20 +23,42 @@ const NavBar = (props) => {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end">
-              <a
-                href={"/home"}
-                className="mr-3 text-dark navbarhover"
-                style={{ textDecoration: "none" }}
-              >
-                <b>ACCUEIL</b>
-              </a>
-              <a
-                href={"/offres"}
-                className="mr-3 text-dark navbarhover "
-                style={{ textDecoration: "none" }}
-              >
-                <b>OFFRES</b>
-              </a>
+              <div className="dropdown mr-3">
+                <p
+                  className="align-items-center mt-3"
+                  style={{ cursor: "default" }}
+                >
+                  <b>
+                    OFFRES <RiArrowDownSLine />
+                  </b>
+                </p>
+                <div className="dropdown-content">
+                  <div className="d-flex flex-column ">
+                    <a
+                      href={"/offres"}
+                      className="text-dark navbarhover "
+                      style={{ textDecoration: "none" }}
+                    >
+                      <b>Site Web</b>
+                    </a>
+                    <a
+                      href={"/offres"}
+                      className="text-dark navbarhover"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <b>Application Mobile</b>
+                    </a>
+
+                    <a
+                      href={"offres"}
+                      className="text-dark navbarhover"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <b>SEO</b>
+                    </a>
+                  </div>
+                </div>
+              </div>
 
               <div className="dropdown mr-3">
                 <p

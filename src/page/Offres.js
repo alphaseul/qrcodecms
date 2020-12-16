@@ -15,7 +15,7 @@ export default function Offres() {
       <section id="pricing" className="pricing">
         <div className="container" data-aos="fade-up">
           <div className="section-title">
-            <h2>Offres</h2>
+            <h2>Offres site web</h2>
             <p>
               Avoir un site web n'a jamais été aussi facile. Optez pour le
               forfait qui correspond à vos besoins Impossible de faire plus
