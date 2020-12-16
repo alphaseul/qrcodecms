@@ -11,7 +11,6 @@ import { history } from "./helpers/history";
 import SideBar from "./SideBar";
 import MyRoute from "./Route";
 import NavBar from "./NavBar";
-import { API } from "aws-amplify";
 
 class App extends Component {
   constructor(props) {
@@ -26,12 +25,7 @@ class App extends Component {
     });
   }
 
-  async componentDidMount() {
-    await API.get("User", "/users").then((response) => {
-      this.entreprise = response;
-    });
-    console.log(this.entreprise);
-
+  componentDidMount() {
     const user = this.props.user;
     document.title = "QR-code protect";
 
