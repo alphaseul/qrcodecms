@@ -14,7 +14,8 @@ import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Devis from "./components/devis.component";
 import Contact from "./components/contact.component";
-import Offres from "./page/Offres";
+import OffresSite from "./page/OffresSite";
+import OffresApplication from "./page/OffresApplication";
 
 const MyRoute = (props) => {
   return (
@@ -38,7 +39,8 @@ const MyRoute = (props) => {
           <Route exact path="/register" component={Register} />
           <Route path="/devis" component={Devis} />
           <Route path="/contact" component={Contact} />
-          <Route path="/offres" component={Offres} />
+          <Route path="/offres-site" component={OffresSite} />
+          <Route path="/offres-application" component={OffresApplication} />
         </Switch>
       )}
     </div>

@@ -35,14 +35,14 @@ const NavBar = (props) => {
                 <div className="dropdown-content">
                   <div className="d-flex flex-column ">
                     <a
-                      href={"/offres"}
+                      href={"/offres-site"}
                       className="text-dark navbarhover "
                       style={{ textDecoration: "none" }}
                     >
                       <b>Site Web</b>
                     </a>
                     <a
-                      href={"/offres"}
+                      href={"/offres-application"}
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
@@ -50,7 +50,7 @@ const NavBar = (props) => {
                     </a>
 
                     <a
-                      href={"offres"}
+                      href={"offres-site"}
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
@@ -76,7 +76,14 @@ const NavBar = (props) => {
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
-                      <b>Devis</b>
+                      <b>Obtenir un devis</b>
+                    </a>
+                    <a
+                      href={"/#"}
+                      className="text-dark navbarhover"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <b>S'inscrire</b>
                     </a>
                     <a
                       href={"/#"}
@@ -91,14 +98,7 @@ const NavBar = (props) => {
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
-                      <b>S'inscrire</b>
-                    </a>
-                    <a
-                      href={"/#"}
-                      className="text-dark navbarhover"
-                      style={{ textDecoration: "none" }}
-                    >
-                      <b>A PROPOS</b>
+                      <b>A propos</b>
                     </a>
                   </div>
                 </div>
