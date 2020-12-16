@@ -83,7 +83,7 @@ export default class Home extends Component {
 
         <section id="services" className="services section-bg">
           <div className="container" data-aos="fade-up">
-            <div class="section-title">
+            <div className="section-title">
               <h2>Nos compétences</h2>
             </div>
             <div className="row">
