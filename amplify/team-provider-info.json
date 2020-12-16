@@ -10,6 +10,11 @@
       "StackName": "amplify-qrcodecms-dev-171524",
       "StackId": "arn:aws:cloudformation:us-east-1:963526565751:stack/amplify-qrcodecms-dev-171524/950d8530-3e27-11eb-bd11-0a5cf73de175",
       "AmplifyAppId": "dgzdwlwnekgh6"
+    },
+    "categories": {
+      "auth": {
+        "cognito5ac2fe34": {}
+      }
     }
   }
 }

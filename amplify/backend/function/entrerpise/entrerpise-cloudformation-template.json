@@ -33,12 +33,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "Users",
+            "entrerpise",
             {
               "Fn::Join": [
                 "",
                 [
-                  "Users",
+                  "entrerpise",
                   "-",
                   {
                     "Ref": "env"
@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-qrcodecms-dev-171524-deployment",
-          "S3Key": "amplify-builds/Users-755947395a466f614230-build.zip"
+          "S3Key": "amplify-builds/entrerpise-4c79524957744f4c6158-build.zip"
         }
       }
     },
@@ -79,12 +79,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "qrcodecmsLambdaRolebf095238",
+            "qrcodecmsLambdaRole6c2b801a",
             {
               "Fn::Join": [
                 "",
                 [
-                  "qrcodecmsLambdaRolebf095238",
+                  "qrcodecmsLambdaRole6c2b801a",
                   "-",
                   {
                     "Ref": "env"

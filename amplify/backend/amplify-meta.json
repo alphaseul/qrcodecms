@@ -17,21 +17,41 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2020-12-14T17:44:57.963Z",
-      "lastPackageTimeStamp": "2020-12-14T17:44:58.463Z",
-      "distZipFilename": "Users-4e6b66654245714b344e-build.zip",
+      "lastBuildTimeStamp": "2020-12-16T10:25:39.278Z",
+      "lastPackageTimeStamp": "2020-12-16T10:25:40.153Z",
+      "distZipFilename": "Users-755947395a466f614230-build.zip",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-qrcodecms-dev-171524-deployment/amplify-cfn-templates/function/Users-cloudformation-template.json",
         "logicalId": "functionUsers"
       },
-      "lastPushTimeStamp": "2020-12-14T22:56:48.558Z",
+      "lastPushTimeStamp": "2020-12-16T13:04:26.849Z",
       "output": {
         "Region": "us-east-1",
         "Arn": "arn:aws:lambda:us-east-1:963526565751:function:Users-dev",
         "Name": "Users-dev",
         "LambdaExecutionRole": "qrcodecmsLambdaRolebf095238-dev"
       },
-      "lastPushDirHash": "jl3xXlNr9DLgvy/8hY3eS6VgFXE="
+      "lastPushDirHash": "sCTn/3cUrTic7zsfcrWNDO/AFdc="
+    },
+    "entrerpise": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2020-12-16T10:25:39.275Z",
+      "lastPackageTimeStamp": "2020-12-16T10:25:39.976Z",
+      "distZipFilename": "entrerpise-4c79524957744f4c6158-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-qrcodecms-dev-171524-deployment/amplify-cfn-templates/function/entrerpise-cloudformation-template.json",
+        "logicalId": "functionentrerpise"
+      },
+      "lastPushTimeStamp": "2020-12-16T13:04:26.852Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:963526565751:function:entrerpise-dev",
+        "Name": "entrerpise-dev",
+        "LambdaExecutionRole": "qrcodecmsLambdaRole6c2b801a-dev"
+      },
+      "lastPushDirHash": "+z++ZFrqC/5I997O+t/5R9NE02w="
     }
   },
   "api": {
@@ -52,13 +72,60 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-qrcodecms-dev-171524-deployment/amplify-cfn-templates/api/User-cloudformation-template.json",
         "logicalId": "apiUser"
       },
-      "lastPushTimeStamp": "2020-12-14T22:56:48.559Z",
+      "lastPushTimeStamp": "2020-12-16T13:04:26.853Z",
       "output": {
         "ApiName": "User",
         "RootUrl": "https://jcp3439ii7.execute-api.us-east-1.amazonaws.com/dev",
         "ApiId": "jcp3439ii7"
       },
       "lastPushDirHash": "XAEILyHqr9wPuuePC8895A1k9X8="
+    },
+    "Entreprise": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "entrerpise",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-qrcodecms-dev-171524-deployment/amplify-cfn-templates/api/Entreprise-cloudformation-template.json",
+        "logicalId": "apiEntreprise"
+      },
+      "lastPushTimeStamp": "2020-12-16T13:04:26.855Z",
+      "output": {
+        "ApiName": "Entreprise",
+        "RootUrl": "https://oov1fvnddk.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "oov1fvnddk"
+      },
+      "lastPushDirHash": "+inIOa8Ma1OXTY+kBt1v5hu/sY0="
+    }
+  },
+  "auth": {
+    "cognito5ac2fe34": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-qrcodecms-dev-171524-deployment/amplify-cfn-templates/auth/cognito5ac2fe34-cloudformation-template.yml",
+        "logicalId": "authcognito5ac2fe34"
+      },
+      "lastPushTimeStamp": "2020-12-16T13:04:26.856Z",
+      "output": {
+        "AppClientSecret": "10b2tb9iq78k1lv5ejlirnlp17cb6a0fs591ck6uuo740i7uu53p",
+        "UserPoolId": "us-east-1_7TrgqCpCp",
+        "AppClientIDWeb": "7dof3cmo3tohc1pff1amnc5bjp",
+        "AppClientID": "6d2e2b3jce1d7egvp1dj06v0oq",
+        "IdentityPoolId": "us-east-1:1d81bbdc-789c-44b5-962e-52894c8691ad",
+        "IdentityPoolName": "qrcodecms_identitypool_c30380f1__dev",
+        "UserPoolName": "qrcodecms_userpool_c30380f1"
+      },
+      "lastPushDirHash": "GJeEWeEwgf21U5GxuC1Aw+7Y980="
     }
   }
 }

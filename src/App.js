@@ -11,6 +11,7 @@ import { history } from "./helpers/history";
 import SideBar from "./SideBar";
 import MyRoute from "./Route";
 import NavBar from "./NavBar";
+import { API } from "aws-amplify";
 
 class App extends Component {
   constructor(props) {
@@ -18,17 +19,22 @@ class App extends Component {
     this.logOut = this.logOut.bind(this);
     this.state = {
       currentUser: undefined,
+      entreprise: [],
     };
-
     history.listen((location) => {
       props.dispatch(clearMessage());
     });
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    await API.get("User", "/users").then((response) => {
+      this.entreprise = response;
+    });
+    console.log(this.entreprise);
+
     const user = this.props.user;
     document.title = "QR-code protect";
-    console.log(this.people);
+
     if (user) {
       this.setState({
         currentUser: user,
