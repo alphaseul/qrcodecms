@@ -86,7 +86,7 @@ const NavBar = (props) => {
                       <b>S'inscrire</b>
                     </a>
                     <a
-                      href={"/#"}
+                      href={"/connexion"}
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >

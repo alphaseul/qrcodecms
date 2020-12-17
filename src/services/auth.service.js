@@ -1,24 +1,24 @@
 import axios from "axios";
+import { Amplify, API } from "aws-amplify";
+import awsmobile from "../aws-exports";
 
-const API_URL = 'http://82.165.184.180:1337/';
-
-
+const API_URL = "/";
+Amplify.configure(awsmobile);
 
 class AuthService {
-  login(email, password) {
-    return axios
-      .post(API_URL+'auth/local', {
-          "identifier": email,
-          "password": password,
-      })
-      .then((response) => {
-        console.log(response.data.jwt)
-        if (response.data.jwt) {
-          localStorage.setItem("user", JSON.stringify(response.data.user));
-          localStorage.setItem("jwt", JSON.stringify(response.data.jwt));
-        }
-        return response;
-      });
+  async login(email, password) {
+    return await API.post("User", "/users", {
+      body: {
+        identifier: email,
+        password: password,
+      },
+    }).then((response) => {
+      if (response.jwt) {
+        localStorage.setItem("user", JSON.stringify(response.user));
+        localStorage.setItem("jwt", JSON.stringify(response.jwt));
+      }
+      return response;
+    });
   }
 
   logout() {
@@ -27,20 +27,19 @@ class AuthService {
   }
 
   register(username, email, password) {
-    return axios.post(API_URL+'users', {
-
-      "username":  username,
-      "email" :  email,
-      "password":  password,
-      "confirmed": true,
-      "role": {
-          "id": 1,
-          "name": "Authenticated",
-          "description": "Default role given to authenticated user.",
-          "type": "authenticated"
-      }
+    return axios.post(API_URL + "users", {
+      username: username,
+      email: email,
+      password: password,
+      confirmed: true,
+      role: {
+        id: 1,
+        name: "Authenticated",
+        description: "Default role given to authenticated user.",
+        type: "authenticated",
+      },
     });
   }
 }
 
-export default new AuthService(); 
+export default new AuthService();

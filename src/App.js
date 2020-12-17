@@ -18,7 +18,6 @@ class App extends Component {
     this.logOut = this.logOut.bind(this);
     this.state = {
       currentUser: undefined,
-      entreprise: [],
     };
     history.listen((location) => {
       props.dispatch(clearMessage());

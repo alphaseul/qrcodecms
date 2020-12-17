@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/users",
+            "lambdaFunction": "user",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/users"
+        }
+    ],
+    "resourceName": "User",
+    "apiName": "User",
+    "functionArns": [
+        {
+            "lambdaFunction": "user"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-qrcodecms-develop-110624-authRole",
+        "unAuthRoleName": "amplify-qrcodecms-develop-110624-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "user",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

@@ -13,6 +13,7 @@ class Profile extends Component {
     return (
       <div className="d-flex container">
         <header className="jumbotron">
+          <h1>helllo</h1>
           <h3>
             <strong>{currentUser.email}</strong>
           </h3>
