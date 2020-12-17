@@ -27,7 +27,7 @@ app.use(function (req, res, next) {
  **********************/
 var axios = require("axios");
 app.get("/users", function (req, res) {
-  res.json({ success: "success get" });
+  res.json({ success: "get call success" });
 });
 
 app.get("/users/*", function (req, res) {
