@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-qrcodecms-develop-110624-deployment",
-          "S3Key": "amplify-builds/user-7142473757797350342f-build.zip"
+          "S3Key": "amplify-builds/user-70797068524d4b382f56-build.zip"
         }
       }
     },
