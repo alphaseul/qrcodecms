@@ -22,7 +22,7 @@ const MyRoute = (props) => {
     <div>
       {props.currentUser ? (
         <Switch>
-          <Route exact path={["/", "/home"]} component={Dashboard} />
+          <Route exact path={["/"]} component={Dashboard} />
           <Route path="/user" component={BoardUser} />
           <Route path="/clients" component={Clients} />
           <Route path="/annonces" component={Annonces} />
@@ -30,7 +30,7 @@ const MyRoute = (props) => {
           <Route path="/add-categorie" component={AddCategorie} />
           <Route path="/factures" component={Factures} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route exact path="/profile" component={Profile} />
+          <Route path="/profile" component={Profile} />
         </Switch>
       ) : (
         <Switch>

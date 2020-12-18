@@ -6,19 +6,23 @@ const API_URL = "/";
 Amplify.configure(awsmobile);
 
 class AuthService {
-  async login(email, password) {
-    return await API.post("User", "/users", {
+  login(email, password) {
+    return API.post("User", "/users", {
       body: {
         identifier: email,
         password: password,
       },
-    }).then((response) => {
-      if (response.jwt) {
-        localStorage.setItem("user", JSON.stringify(response.user));
-        localStorage.setItem("jwt", JSON.stringify(response.jwt));
-      }
-      return response;
-    });
+    })
+      .then((response) => {
+        if (response.jwt) {
+          localStorage.setItem("user", JSON.stringify(response.user));
+          localStorage.setItem("jwt", JSON.stringify(response.jwt));
+        }
+        return response;
+      })
+      .catch((error) => {
+        return error;
+      });
   }
 
   logout() {

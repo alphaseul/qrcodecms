@@ -12,7 +12,7 @@ import AuthService from "../services/auth.service";
 export const register = (username, email, password) => (dispatch) => {
   return AuthService.register(username, email, password).then(
     (response) => {
-      console.log(response)
+      console.log(response);
       dispatch({
         type: REGISTER_SUCCESS,
       });
@@ -47,22 +47,15 @@ export const register = (username, email, password) => (dispatch) => {
 };
 
 export const login = (email, password) => (dispatch) => {
-  return AuthService.login(email, password).then(
-    (data) => {
+  return AuthService.login(email, password).then((response) => {
+    if (response.data) {
       dispatch({
         type: LOGIN_SUCCESS,
-        payload: { user: data},
+        payload: { user: response.data },
       });
-
       return Promise.resolve();
-    },
-    (error) => {
-      const message =
-        (error.statusCode &&
-          error.error &&
-          error.message.messages.message) ||
-        error.data ||
-        error.toString();
+    } else if (response.error) {
+      const message = "Email ou mot de passe incorrect";
 
       dispatch({
         type: LOGIN_FAIL,
@@ -75,7 +68,7 @@ export const login = (email, password) => (dispatch) => {
 
       return Promise.reject();
     }
-  );
+  });
 };
 
 export const logout = () => (dispatch) => {

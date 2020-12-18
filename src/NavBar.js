@@ -90,7 +90,7 @@ const NavBar = (props) => {
                       className="text-dark navbarhover"
                       style={{ textDecoration: "none" }}
                     >
-                      <b>Connexion</b>
+                      <b>Mon espace</b>
                     </a>
 
                     <a
