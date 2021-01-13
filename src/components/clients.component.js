@@ -87,26 +87,32 @@ export default class Clients extends Component {
         </div>
         <div style={{ float: "right" }}>
           <nav aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item">
-                <Link class="page-link" href="#" aria-label="Previous">
+            <ul className="pagination">
+              <li className="page-item">
+                <Link className="page-link" to="/#" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
+                  <span className="sr-only">Previous</span>
                 </Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link">1</Link>
+              <li className="page-item">
+                <Link to="/#" className="page-link">
+                  1
+                </Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link">2</Link>
+              <li className="page-item">
+                <Link to="/#" className="page-link">
+                  2
+                </Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link">3</Link>
+              <li className="page-item">
+                <Link to="/#" className="page-link">
+                  3
+                </Link>
               </li>
-              <li class="page-item">
-                <Link class="page-link" aria-label="Next">
+              <li className="page-item">
+                <Link to="/#" className="page-link" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
+                  <span className="sr-only">Next</span>
                 </Link>
               </li>
             </ul>

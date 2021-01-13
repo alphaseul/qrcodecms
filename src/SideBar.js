@@ -28,7 +28,7 @@ export default (props) => {
             style={{ width: "11%", height: "1000px" }}
           >
             <div className="sidenav">
-              <div class="pic">
+              <div className="pic">
                 <img src={img} className="img-fluid" alt="" />
               </div>
               <Link to={"/Dashboard"}>

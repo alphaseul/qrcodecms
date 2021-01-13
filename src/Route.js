@@ -16,6 +16,8 @@ import Devis from "./components/devis.component";
 import Contact from "./components/contact.component";
 import OffresSite from "./page/OffresSite";
 import OffresApplication from "./page/OffresApplication";
+import About from "./page/About";
+import NoPath from "./404";
 
 const MyRoute = (props) => {
   return (
@@ -31,6 +33,7 @@ const MyRoute = (props) => {
           <Route path="/factures" component={Factures} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/profile" component={Profile} />
+          <Route path="/*" component={NoPath} />
         </Switch>
       ) : (
         <Switch>
@@ -41,6 +44,8 @@ const MyRoute = (props) => {
           <Route path="/contact" component={Contact} />
           <Route path="/offres-site" component={OffresSite} />
           <Route path="/offres-application" component={OffresApplication} />
+          <Route path="/about" component={About} />
+          <Route path="/*" component={NoPath} />
         </Switch>
       )}
     </div>

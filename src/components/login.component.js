@@ -9,7 +9,7 @@ import CheckButton from "react-validation/build/button";
 
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
-import "../Login.css";
+import "./style/login.css";
 
 const required = (value) => {
   if (!value) {
@@ -131,6 +131,9 @@ class Login extends Component {
                   )}
                   <span>Connexion</span>
                 </button>
+              </div>
+              <div className="espace">
+                <a href="/register">Créer mon espace</a>
               </div>
 
               {message && (

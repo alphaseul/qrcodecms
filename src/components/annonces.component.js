@@ -92,7 +92,10 @@ class Annonce extends Component {
                   </Card.Header>
                   <ListGroup variant="flush">
                     <ListGroup.Item>
-                      <Link style={{ textDecoration: "none", color: "black" }}>
+                      <Link
+                        to="/#"
+                        style={{ textDecoration: "none", color: "black" }}
+                      >
                         Catégorie
                         <img
                           src={image}
@@ -115,22 +118,33 @@ class Annonce extends Component {
           <nav aria-label="Page navigation example">
             <ul className="pagination">
               <li className="page-item">
-                <Link className="page-link" href="#" aria-label="Previous">
+                <Link
+                  to="/#"
+                  className="page-link"
+                  href="#"
+                  aria-label="Previous"
+                >
                   <span aria-hidden="true">&laquo;</span>
                   <span className="sr-only">Previous</span>
                 </Link>
               </li>
               <li className="page-item">
-                <Link className="page-link">1</Link>
+                <Link to="/#" className="page-link">
+                  1
+                </Link>
               </li>
               <li className="page-item">
-                <Link className="page-link">2</Link>
+                <Link to="/#" className="page-link">
+                  2
+                </Link>
               </li>
               <li className="page-item">
-                <Link className="page-link">3</Link>
+                <Link to="/#" className="page-link">
+                  3
+                </Link>
               </li>
               <li className="page-item">
-                <Link className="page-link" aria-label="Next">
+                <Link to="/#" className="page-link" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                   <span className="sr-only">Next</span>
                 </Link>

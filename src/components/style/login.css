@@ -1,0 +1,13 @@
+.espace {
+  display: flex;
+  justify-content: center;
+}
+.espace a {
+  text-align: center;
+  color: black;
+}
+
+.espace a:hover {
+  text-decoration: none;
+  color: #85139e;
+}

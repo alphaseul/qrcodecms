@@ -1,9 +1,5 @@
 import axios from "axios";
 import authHeader from "./auth-header";
-const sendmail = require("@sendgrid/mail");
-const apiKey =
-  "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";
-sendmail.setApiKey(apiKey);
 
 const API_URL = "http://82.165.184.180:1337/";
 
@@ -32,18 +28,6 @@ class UserService {
       //headers: authHeader(),
       //},
     });
-  }
-  sendmail(msg) {
-    sendmail.send(msg).then(
-      () => {},
-      (error) => {
-        console.error(error);
-
-        if (error.response) {
-          console.error(error.response.body);
-        }
-      }
-    );
   }
 }
 

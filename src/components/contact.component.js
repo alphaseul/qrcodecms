@@ -6,12 +6,13 @@ import Iframe from "react-iframe";
 import { GoLocation } from "react-icons/go";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdCall } from "react-icons/md";
+import { Formik } from "formik";
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      validate: true,
+      validate: false,
     };
   }
   componentDidMount() {
@@ -20,6 +21,7 @@ export default class Contact extends Component {
     });
   }
   render() {
+    const { validate } = this.state;
     return (
       <section id="contact" className="contact">
         <div className="container" data-aos="fade-up">
@@ -68,67 +70,90 @@ export default class Contact extends Component {
             </div>
 
             <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form className="php-email-form">
-                <div className="row">
-                  <div className="form-group col-md-6">
-                    <label htmlFor="name">Nom</label>
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control"
-                      id="name"
-                      data-rule="minlen:4"
-                      data-msg="Please enter at least 4 chars"
-                    />
-                    <div className="validate"></div>
-                  </div>
-                  <div className="form-group col-md-6">
-                    <label htmlFor="name">Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      id="email"
-                      data-rule="email"
-                      data-msg="Please enter a valid email"
-                    />
-                    <div className="validate"></div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="name">Sujet</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="subject"
-                    id="subject"
-                    data-rule="minlen:4"
-                    data-msg="Please enter at least 8 chars of subject"
-                  />
-                  <div className="validate"></div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="name">Message</label>
-                  <textarea
-                    className="form-control"
-                    name="message"
-                    rows="10"
-                    data-rule="required"
-                    data-msg="Please write something for us"
-                  ></textarea>
-                  <div className="validate"></div>
-                </div>
-                <div className="mb-3">
-                  <div className="loading">Loading</div>
-                  <div className="error-message"></div>
-                  <div className="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
-                <div className="text-center">
-                  <button type="submit">ENVOYER</button>
-                </div>
-              </form>
+              <Formik
+                initialValues={{
+                  name: " ",
+                  email: " ",
+                  subject: " ",
+                  message: " ",
+                }}
+                onSubmit={(values) => {
+                  this.setState({ validate: true });
+                }}
+              >
+                {({ values, handleChange, handleSubmit }) => (
+                  <form onSubmit={handleSubmit} className="php-email-form">
+                    <div className="row">
+                      <div className="form-group col-md-6">
+                        <label htmlFor="name">Nom</label>
+                        <input
+                          type="text"
+                          name="name"
+                          onChange={handleChange}
+                          className="form-control"
+                          id="name"
+                          data-rule="minlen:4"
+                          data-msg="Please enter at least 4 chars"
+                          required
+                        />
+                        <div className="validate"></div>
+                      </div>
+                      <div className="form-group col-md-6">
+                        <label htmlFor="name">Email</label>
+                        <input
+                          type="email"
+                          className="form-control"
+                          name="email"
+                          onChange={handleChange}
+                          id="email"
+                          data-rule="email"
+                          data-msg="Please enter a valid email"
+                          required
+                        />
+                        <div className="validate"></div>
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="name">Sujet</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="subject"
+                        onChange={handleChange}
+                        id="subject"
+                        data-rule="minlen:4"
+                        data-msg="Please enter at least 8 chars of subject"
+                        required
+                      />
+                      <div className="validate"></div>
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="name">Message</label>
+                      <textarea
+                        className="form-control"
+                        name="message"
+                        rows="10"
+                        onChange={handleChange}
+                        required
+                        data-msg="Please write something for us"
+                      ></textarea>
+                      <div className="validate"></div>
+                    </div>
+                    {validate && (
+                      <div className="mb-3">
+                        <div className="loading">Loading</div>
+                        <div className="error-message"></div>
+                        <div className="sent-message">
+                          Merci, votre message a été envoyé.
+                        </div>
+                      </div>
+                    )}
+                    <div className="text-center">
+                      {!validate && <button type="submit">ENVOYER</button>}
+                    </div>
+                  </form>
+                )}
+              </Formik>
             </div>
           </div>
         </div>
